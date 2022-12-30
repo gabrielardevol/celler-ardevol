@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   get "about", to: "pages#about"
   get "contact", to: "pages#contact"
   get "testing", to: "pages#testing"
-
+  get "gridtesting", to: "pages#gridtesting"
 
 end
