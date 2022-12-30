@@ -1,15 +1,18 @@
 <style>
+  body {
+    background-color: whitesmoke;
+  }
   .layout {
-      width: 66%;
+      width: 66%; /* change accordingly to small-title width property */
       margin: auto;
     }
 
   .mediumtext {
-    font-size: 1.9em;
+    font-size: 2.5em;
   }
 
   .smalltext {
-    font-size: 1.3em;
+    font-size: 1.4em;
   }
 
   .biggertext {
@@ -33,24 +36,77 @@
 
   .bottomdotted {
     border-bottom: 6px dotted;
+    margin-bottom: 0.4em;
+    padding-bottom: 0.4em;
   }
 
-  .circle-image {
-    border-radius: 50%;
-    height: 14em;
-    width: 14em;
+
+  .two-column-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 5em;
+
+  }
+
+  .imagetest{
+    border-radius: 5%;
+    height: 24em;
+    width: 24em;
     object-fit: cover;
   }
+
 </style>
-<p class="layout mediumtext bottomdotted">
+<div class="two-column-grid layout">
+
+<div id="image-block">
+ <%= image_tag "pare.png", class: "imagetest" %>
+  </div>
+
+  <div id="text-block">
+    <div class="mediumtext bottomdotted" style="width: fit-content; text-align: left; margin: none;">
+    Porrera i la DOQ</div>
+    <div class="smalltext">
+    La historia de Porrera es la historia de nuestra família (nuestro apellido?).
+    <br>
+    <br>
+    La vid se introduce en nuestra región por parte de los cartujos(cartujanos?) de la Cartoixa d'Escaladei. (?)
+    <br>
+    Es entonces que el municipio, registrado en 1157 como Vallem Porreram, pasa a formar parte del dominio de la institucion. (?)
+    <br>
+    <br>
+    Ya en el siglo XIII se dedicó nuestra família al cultivo de la vid, en estas mismas (montañas?).
+    <br>
+    <br>
+    Es en 1995, durante los inicios del renacimiento vitivinícola de la región, que Josep Ardèvol retoma el trabajo agrícola.
+
+    <br>
+
+
+
+    mucho antes de la filoxera, dedicándose a la venta de vino a granel durante los años treinta y cuarenta. Posteriormente con el auge del cultivo del avellano se abandonó el de la vid.
+    Con sus pendientes de pizarra que sobrepasan el 15% de desnivel, la D. O. Calificada Priorat ha subido por ellas hasta lo mas alto en el reconocimiento de la calidad de sus vinos.
+    </div>
+  </div>
+
+
+</div>
+
+
+<div style="padding: 50em">.</div>
+
+<p class=" layout mediumtext bottomdotted">
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 </p>
 
 <br>
 
 <p class="layout smalltext">
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-</p>
+
+En el año 1995 hemos iniciado nuevas plantaciones y junto con Albert y Roser decidimos materializar el cariño que sentimos por nuestra tierra y sus raíces vinculadas al vino con la
+creación de una pequeña bodega familiar en la que seleccionamos nuestras mejores uvas, obteniendo así un producto que está a la altura de los mejores Prioratos.
+Nuestras tierras muy pobres y bien orientadas; con unas variedades poco productivas y de gran calidad genética; unas labores culturales basadas en agricultura tradicional intentando minimizar la intervención humana, son factores que conjugados hacen que se logren unos mostos concentrados en color y aromas, con unos valores de acidez, ph, alcohol, etc.,
+adecuados para la consecución de las fermentaciones y posterior crianza con mínimos problemas.
+En nuestra bodega aplicamos largas maceraciones, suaves prensados, crianza en maderas francesas de tostado ligero y grano fino, procesos entre otros que hace que nuestro vino nos evoque sensaciones puramente naturales , en ausencia de sabores extraños, excesos de maderas, tostados y otros que no corresponden a la pura evolución y complejidad de la crianza de un buen vino.</p>
 
 <br>
 
