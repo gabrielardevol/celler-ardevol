@@ -13,4 +13,8 @@ class PagesController < ApplicationController
 
   def gridtesting
   end
+
+  def porfoli
+    @word = "gabriel"
+  end
 end

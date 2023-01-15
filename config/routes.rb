@@ -8,5 +8,11 @@ Rails.application.routes.draw do
   get "contact", to: "pages#contact"
   get "testing", to: "pages#testing"
   get "gridtesting", to: "pages#gridtesting"
-
+  get "porfoli", to: "pages#porfoli"
+  post "posts", to: "posts#create"
+  get "posts/new", to: "posts#new", as: :new_post
+  get "posts", to: "posts#index" #read all
+  get "posts/:id", to: "posts#show", as: :post #read one
+  get "posts/:id/edit", to: "posts#edit", as: :edit_post
+  patch "posts/:id", to: "posts#update"
 end
