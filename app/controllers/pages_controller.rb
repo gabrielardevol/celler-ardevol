@@ -14,4 +14,7 @@ class PagesController < ApplicationController
   def gridtesting
   end
 
+  def carousel
+  end
+
 end

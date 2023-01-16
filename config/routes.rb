@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # root "articles#index"
   root to: "pages#home"
   get "about", to: "pages#about"
+  get "carousel", to: "pages#carousel"
+
   get "contact", to: "pages#contact"
   get "testing", to: "pages#testing"
   get "gridtesting", to: "pages#gridtesting"
