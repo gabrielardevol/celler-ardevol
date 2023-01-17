@@ -12,8 +12,8 @@ Rails.application.routes.draw do
   get "wines", to: "wines#index" #read all
 
 
-#   get "contact", to: "pages#contact"
-   get "testing", to: "pages#testing"
+  get "contact", to: "pages#contact"
+  get "testing", to: "pages#testing"
 #   get "gridtesting", to: "pages#gridtesting"
 #   get "porfoli", to: "pages#porfoli"
 #   post "posts", to: "posts#create"

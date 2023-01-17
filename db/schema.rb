@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_02_163424) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_17_163738) do
+  create_table "cellers", force: :cascade do |t|
+    t.string "address"
+    t.float "latitude"
+    t.float "longitude"
+  end
+
   create_table "wines", force: :cascade do |t|
     t.string "name"
     t.text "concept"

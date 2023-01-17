@@ -13,67 +13,22 @@
   </head>
 
   <body style="margin: none">
-  <div id="header" style="background-color: grey">
-      <p class="medium-text" style="margin: 0.5em; font-size: 1.8em;">Celler <%= image_tag("logo.png", style: "height: 1em;") %>
-Ardèvol</p>
-    </div>
+
+  <div id="header" class= "wine">
+    <a href="/" class= "whitelink">
+    <p class="medium-text whitelink" style="margin: 0.5em; font-size: 1.8em;">Celler <%= image_tag("logo.png", style: "height: 1em;") %> Ardèvol</p>
+    </a>
+  </div>
 
     <div id="navbar">
-      <p class="navbar-item">Qui sóm?</p>
-      <p class="navbar-item">Els vins</p>
-      <a class="navbar-item" href="#contacte">Contacte</a>
+      <a class="navbar-item whitelink" href="/about">Qui sóm?</a>
+      <a class="navbar-item whitelink" href="/wines">Els vins</a>
+      <a class="navbar-item whitelink" href="/contact">Contacte</a>
     </div>
+    <div class="main-container">
     <%= yield %>
-    <script>
-  var carouselContainer = document.getElementById("carousel-container");
-  var carouselItem = document.querySelector(".carousel-item");
-  var carouselItems = document.querySelector(".carousel-items");
+    </div>
+       <div id="footer" class="wine" style="text-align: center; margin-bottom: none">Celler Ardèvol i Associats, S.L. <br> Disseny web: Gabriel Ardèvol <br> copyright:  </div>
 
-function headerColorChange() {
-  var header = document.getElementById("header");
-  var rect = carouselContainer.getBoundingClientRect();
-  var carouselPosition = rect.bottom + window.pageYOffset;
-  let headerHeight = header.offsetHeight;
-  let carouselHeight = carouselContainer.offsetHeight;
-
-  window.onscroll = function() {
-    if(window.pageYOffset >= (carouselPosition - headerHeight)){
-      header.style.backgroundColor = "grey"}
-    else {header.style.backgroundColor = "transparent"}
-    function opacityCarousel() {
-     //console.log(window.pageYOffset / carouselHeight)
-     carouselItem.style.opacity = 1 - (window.pageYOffset / carouselHeight)
-
-    }
-    opacityCarousel()
-  }
-}
-
-headerColorChange()
-
-window.addEventListener("resize", handleResize);
-function handleResize() {
-  headerColorChange()
-}
-
-
-currentIndex = 1
- nextButton = document.getElementById("next-button")
- prevButton = document.getElementById("prev-button")
-
- nextButton.addEventListener('click', () => {
-  console.log("click")
-  currentIndex++;
-  carouselItem.style.transform = `translateX(${-currentIndex * 100}%)`;
-});
-
-
- prevButton.addEventListener('click', () => {
-  console.log("clickprev")
-  currentIndex--;
-  carouselItem.style.transform = `translateX(${+currentIndex * 100}%)`;
-});
-</script>
   </body>
-
 </html>

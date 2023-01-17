@@ -1,5 +1,24 @@
-wines index
-<h1></h1>
+<style>
+.wine-card {
+
+}
+</style>
+
+<div style = "margin: auto; width: 90%">
+
 <% @wines.each do |wine|%>
-<%= wine.name%>
+
+<div class="wine-card" style="display: grid; grid-template-columns: 1fr 1fr; gap: 0%">
+  <div>
+    <img src="https://via.placeholder.com/300" style="object-fit: cover">
+  </div>
+
+  <div class="flex-element">
+    <h1><%= wine.name%></h1>
+    <p><%= wine.concept%></p>
+  </div>
+</div>
+
 <%end%>
+
+</div>

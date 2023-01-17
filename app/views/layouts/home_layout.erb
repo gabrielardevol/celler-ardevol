@@ -19,21 +19,29 @@ Ardèvol</p>
     </div>
 
 
- <div id= "carousel-container" style="">
+ <div id= "carousel-container" class = "wine"style="">
       <div id="carousel-items">
         <img class="carousel-item" src="https://via.placeholder.com/199" style="min-width: 100vw; object-fit: cover">
         <img class="carousel-item" src="https://via.placeholder.com/800x799" style="min-width: 100vw; object-fit: cover">
       </div>
-      <button id="prev-button">Previous</button>
-      <button id="next-button">Next</button>
+      <%# <button id="prev-button">Previous</button>
+      <button id="next-button">Next</button> %>
     </div>
 
     <div id="navbar">
-      <p class="navbar-item">Qui sóm?</p>
-      <p class="navbar-item">Els vins</p>
-      <a class="navbar-item" href="#contacte">Contacte</a>
+      <a class="navbar-item whitelink" href="/about">Qui sóm?</a>
+      <a class="navbar-item whitelink" href="/wines">Els vins</a>
+      <a class="navbar-item whitelink" href="/contact">Contacte</a>
     </div>
+
+    <div class="main-container">
     <%= yield %>
+    </div>
+
+
+  <div id="footer" class="wine white-text" style="text-align: center; margin-bottom: none">Celler Ardèvol <br> contact info <br> website by <br> something else </div>
+
+
   </body>
 
   <script>
@@ -50,8 +58,11 @@ function headerColorChange() {
 
   window.onscroll = function() {
     if(window.pageYOffset >= (carouselPosition - headerHeight)){
-      header.style.backgroundColor = "grey"}
-    else {header.style.backgroundColor = "transparent"}
+     // header.style.backgroundColor = "grey"}
+      header.classList.add("wine")}
+    else {
+     // header.style.backgroundColor = "transparent"
+      header.classList.remove("wine")}
     function opacityCarousel() {
      //console.log(window.pageYOffset / carouselHeight)
      carouselItem.style.opacity = 1 - (window.pageYOffset / carouselHeight)
