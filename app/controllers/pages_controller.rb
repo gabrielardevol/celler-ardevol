@@ -1,5 +1,10 @@
 class PagesController < ApplicationController
   def home
+    render layout: 'home_layout'
+  end
+
+  def product
+    render layout: 'application'
   end
 
   def about
@@ -9,6 +14,7 @@ class PagesController < ApplicationController
   end
 
   def testing
+
   end
 
   def gridtesting
@@ -16,5 +22,6 @@ class PagesController < ApplicationController
 
   def carousel
   end
+
 
 end

@@ -1,0 +1,22 @@
+#navbar {
+      justify-content: space-between;
+      background-color: grey;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-variant: small-caps;
+
+      position: -webkit-sticky; /* Safari */
+      position: sticky;
+      top: 7vh;
+    }
+
+    .navbar-item {
+      margin: 0em;
+      padding: 0.3em 2.2em;
+    }
+
+    .navbar-item:hover {
+      background-color: black;
+    }

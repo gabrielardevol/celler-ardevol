@@ -1,87 +1,12 @@
  <html>
   <head>
+
     <style>
-
-    body {
-      margin: 0px;
-      padding: 0px;
-      background-color: whitesmoke;
+    *{
+  /* font-family: 'Libre Baskerville'; */
+    font-family: 'EB Garamond';
     }
 
-    #header {
-      position: -webkit-sticky; /* Safari */
-      position: sticky;
-      top: 0;
-      z-index: 2;
-
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 7vh;
-    }
-
-    .carousel-items{
-
-    }
-
-    .carousel-item {
-      display: flex;
-      opacity: 1;
-      width: 100%;
-      height: 100vh;
-    }
-
-    #carousel-container {
-      background-color: grey;
-      z-index: 1;
-      width: 100%;
-      height: 100vh;
-      margin-top: -7vh;
-
-      position: relative; /* to place the buttons */
-
-      display: flex;
-      overflow: hidden
-    }
-
-    #prev-button, #next-button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    #prev-button {
-      left: 0; /* This positions the prev button on the left side of the carousel */
-    }
-
-    #next-button {
-      right: 0; /* This positions the next button on the right side of the carousel */
-    }
-
-    #navbar {
-      justify-content: space-between;
-      background-color: grey;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-variant: small-caps;
-
-      position: -webkit-sticky; /* Safari */
-      position: sticky;
-      top: 7vh;
-    }
-
-    .navbar-item {
-      margin: 0em;
-      padding: 0.3em 2.2em;
-    }
-
-    .navbar-item:hover {
-      background-color: black;
-    }
 
     .medium-text {
       font-size: 1.8em;
@@ -112,8 +37,6 @@
       font-size: 1.2em;
     }
 
-
-
     #footer {
       background-color: grey;
       margin-top: 3em;
@@ -122,25 +45,6 @@
     </style>
   </head>
   <body>
-
-    <div id="header">
-      <p class="medium-text" style="margin: 0.5em; font-size: 1.8em;">Celler Ardèvol</p>
-    </div>
-
-    <div id= "carousel-container" style="">
-      <div id="carousel-items">
-        <img class="carousel-item" src="https://via.placeholder.com/199" style="min-width: 100vw; object-fit: cover">
-        <img class="carousel-item" src="https://via.placeholder.com/800x799" style="min-width: 100vw; object-fit: cover">
-      </div>
-      <button id="prev-button">Previous</button>
-      <button id="next-button">Next</button>
-    </div>
-
-    <div id="navbar">
-      <p class="navbar-item">Qui sóm?</p>
-      <p class="navbar-item">Els vins</p>
-      <a class="navbar-item" href="#contacte">Contacte</a>
-    </div>
 
 
 
@@ -172,54 +76,5 @@
 
 
 
-<script>
-  var carouselContainer = document.getElementById("carousel-container");
-  var carouselItem = document.querySelector(".carousel-item");
-  var carouselItems = document.querySelector(".carousel-items");
 
-function headerColorChange() {
-  var header = document.getElementById("header");
-  var rect = carouselContainer.getBoundingClientRect();
-  var carouselPosition = rect.bottom + window.pageYOffset;
-  let headerHeight = header.offsetHeight;
-  let carouselHeight = carouselContainer.offsetHeight;
-
-  window.onscroll = function() {
-    if(window.pageYOffset >= (carouselPosition - headerHeight)){
-      header.style.backgroundColor = "grey"}
-    else {header.style.backgroundColor = "transparent"}
-    function opacityCarousel() {
-     //console.log(window.pageYOffset / carouselHeight)
-     carouselItem.style.opacity = 1 - (window.pageYOffset / carouselHeight)
-
-    }
-    opacityCarousel()
-  }
-}
-
-headerColorChange()
-
-window.addEventListener("resize", handleResize);
-function handleResize() {
-  headerColorChange()
-}
-
-
-currentIndex = 1
- nextButton = document.getElementById("next-button")
- prevButton = document.getElementById("prev-button")
-
- nextButton.addEventListener('click', () => {
-  console.log("click")
-  currentIndex++;
-  carouselItem.style.transform = `translateX(${-currentIndex * 100}%)`;
-});
-
-
- prevButton.addEventListener('click', () => {
-  console.log("clickprev")
-  currentIndex--;
-  carouselItem.style.transform = `translateX(${+currentIndex * 100}%)`;
-});
-</script>
 </html>
