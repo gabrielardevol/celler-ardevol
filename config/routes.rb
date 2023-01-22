@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # get "product", to: "pages#product"
 
   get "wines/:id", to: "wines#show", as: :wine #read one
-  get "wines", to: "wines#index" #read all
+  get "wines", to: "pages#wines" #read all
 
 
   get "contact", to: "pages#contact"

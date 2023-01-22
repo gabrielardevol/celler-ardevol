@@ -1,0 +1,52 @@
+@import "header";
+
+.grid {
+  display: grid; grid-template-columns: 1fr 1fr; align-items: center;
+}
+.grid-padding {
+  padding: 2em 3em;
+}
+
+.grid-image-container {
+   background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    min-height: 10em;
+}
+
+footer {
+  background-color: black;
+  color: white;
+}
+
+.navbar {
+  background-color: black;
+  justify-content: space-between;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-variant: small-caps;
+
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+.navbar-item {
+  color: white;
+  padding: 0em 1em
+}
+
+.navbar-item:hover {
+  background-color: grey;
+}
+
+.whitelink {
+  text-decoration: none;
+}
+body {
+  margin: 0px;
+  background-color: whitesmoke;
+}

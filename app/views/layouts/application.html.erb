@@ -14,32 +14,23 @@
 
   <body style="margin: none">
 
- <div id = "headertop" style = "
-    height: 14.5vh
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    color: white;
-    width: 100%;
-    background-color: transparent;
-    display: grid;
-    grid-template-columns: 1fr;
-    ">
+<a href="/">
+ <header>
     <%= image_tag("logo.png", style: "height: 9vh; margin: auto; margin-top: 1vh")%>
     <p class="medium-text" style="margin: auto">Celler Ardèvol</p>
-    </div>
+  </header>
+</a>
 
-    <div id="navbar" class="wine">
-      <a class="navbar-item whitelink" href="/about">Qui sóm?</a>
-      <a class="navbar-item whitelink" href="/wines">Els vins</a>
-      <a class="navbar-item whitelink" href="/history">Història</a>
-      <a class="navbar-item whitelink" href="/contact">Contacte</a>
-    </div>
-    <div class="main-container">
-    <%= yield %>
-    </div>
-       <div id="footer" class="wine" style="text-align: center; margin-bottom: none">Celler Ardèvol i Associats, S.L. <br> Disseny web: Gabriel Ardèvol <br> copyright:  </div>
+  <div class="navbar">
+    <a class="navbar-item whitelink" href="/about">Qui sóm?</a>
+    <a class="navbar-item whitelink" href="/wines">Els vins</a>
+    <a class="navbar-item whitelink" href="/history">Història</a>
+    <a class="navbar-item whitelink" href="/contact">Contacte</a>
+  </div>
+  <div class="main-container">
+  <%= yield %>
+  </div>
+  <footer style=" background-color: black; text-align: center; margin-bottom: none">Celler Ardèvol <br> contact info <br> website by <br> something else </footer>
 
   </body>
 </html>

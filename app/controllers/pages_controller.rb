@@ -8,7 +8,7 @@ class PagesController < ApplicationController
       {section: "Història", title: "Contemporanietat", content: "No va ser fins a les darreries del segle XX que la comarca va començar a recuperar-se gràcies a l'esforç d'un grup de viticultors locals i l'aparició de noves varietats de raïm.
         Això va portar a un augment en la qualitat del vi i un major reconeixement a nivell internacional, en el que podriem definir com un renaixement vitivinícola de la regió. El vi Priorat passaria de la desestimada venda a granel a ser considerat un producte exclusiu i sibarita. És al 1995, en el context d’aquests primers anys de ressorgiment, que Josep Ardèvol comença amb la replantació de les antigues vinyes familiars en el terme de Porrera, el seu poble natal, i cinc anys després hi funda el celler junt als socis Roser Gallceràn i Albert Ardèvol. En aquest mateix any la denominació d’origen prioratina és designada com la segona denominació d’origen qualificada d’Espanya (DOQ), junt amb la Rioja, solidificant l’estatus de la regió.
         El caràcter dels vins prioratins es deu al sòl de pissarra llicorella, pobre en nutrients i en aigua, en què la vinya ha d’esforçar-se per a prosperar. El fruit resultant és petit i concentrat, dens en sucre, tanins i aroma. Això repercuteix en un vi amb molt de cos, intens i ric. Igual de complicat que la vinya ho té l’agricultor: el terreny és inclinat i escarpat, innaccessible a grans maquinàries, motiu que obliga a una gran quantitat de treball manual. Tanmateix és per això que les produccions de la DOQ són tant limitades i exclusives, i relativament costoses.
-        ", image: 'history/image.png'}
+        ", image: 'history/field.JPG'}
     ]
 
   @@about_cat =
@@ -19,6 +19,14 @@ class PagesController < ApplicationController
       {section: "Qui som", title: "Actualitat", content: "actualment la empresa la portem la Raquel i els fills, distribuïts de forma que el Max s’encarrega de la viticultura i del celler,la Niru? l’Albert l’ajuda, a Raquel s’encarrega de l’administració i la direcció, de la coordinació i de fer de mare i el Gabriel de la web i poc a poc de la identitat de marca. també seguim comptant amb el suport de la Roser Amorós com a enòloga i el Ricard Zamora com a comercial,
         i l’Anjoli pren el relleu de la Roser com a socia corporativa. I seguim comptant també amb tanta altra gent del poble i de la comarca que d’una forma o altra ens presten el seu suport, amb el cooperativisme que ens identifica com a prioratins.
         ".html_safe , image: ""}
+    ]
+
+  @@wines_cat =
+    [
+      {
+        name: "Coma d'en Romeu",
+        concept: "",
+      },
     ]
   def home
     @landing_page_cat = [

@@ -14,50 +14,31 @@
 
   <body>
 
-    <div id = "headertop" style = "
-    height: 14.5vh
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    color: white;
-    width: 100%;
-    background-color: transparent;
-    display: grid;
-    grid-template-columns: 1fr;
+    <header style = "
+position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: transparent;
 
     ">
     <%= image_tag("logo.png", style: "height: 9vh; margin: auto; margin-top: 1vh; opacity: 1.0;")%>
     <p class="medium-text" style="margin: auto">Celler Ardèvol</p>
-    </div>
+    </header>
 
 
-  <div id= "carousel-container" class = ""style="background-color: black; margin-top: -13.5vh">
+  <div id= "carousel-container" class = ""style="background-color: black; margin-top: -14vh; height: 100vh;">
     <div id="carousel-items">
       <div>
-      <%= image_tag "mountain.png", class: "carousel-item", style: "min-width: 100vw; object-fit: cover;" %>
+      <%= image_tag("mountain.png", class: "carousel-item", style: "object-fit: cover; height: 100vh; width: 100%;") %>
       </div>
-      <img class="carousel-item" src="https://via.placeholder.com/199" style="min-width: 100vw; object-fit: cover">
-      <img class="carousel-item" src="https://via.placeholder.com/800x799" style="min-width: 100vw; object-fit: cover">
     </div>
     <%# <button id="prev-button">Previous</button>
     <button id="next-button">Next</button> %>
   </div>
 
 
-    <div style="
-      background-color: black;
-      justify-content: space-between;
-      color: white;
-      //display: flex;
-      align-items: center;
-      justify-content: center;
-      font-variant: small-caps;
-
-      position: -webkit-sticky; /* Safari */
-      position: sticky;
-      top: 0;
-      padding: 4.24px">
+    <div class="navbar">
       <a class="navbar-item whitelink" href="/about">Qui sóm?</a>
       <a class="navbar-item whitelink" href="/wines">Els vins</a>
       <a class="navbar-item whitelink" href="/history">Història</a>
@@ -71,7 +52,7 @@
 
     </div>
 
-  <div id="footer" class=" white-text" style=" background-color: black; text-align: center; margin-bottom: none">Celler Ardèvol <br> contact info <br> website by <br> something else </div>
+  <footer style=" background-color: black; text-align: center; margin-bottom: none">Celler Ardèvol <br> contact info <br> website by <br> something else </footer>
   </body>
 
 
@@ -85,7 +66,7 @@
   var carouselItems = document.querySelector(".carousel-items");
 
 function headerColorChange() {
-  var header = document.getElementById("headertop");
+  var header = document.querySelector("header");
   var rect = carouselContainer.getBoundingClientRect();
   var carouselPosition = rect.bottom + window.pageYOffset;
   let headerHeight = header.offsetHeight;
@@ -98,7 +79,7 @@ function headerColorChange() {
      // header.classList.add("blackbg")
      }
     else {
-      header.style.backgroundColor = "transparent";
+      //header.style.backgroundColor = "transparent";
      // header.style.position = "sticky"
      }
      // header.classList.remove("blackbg")}

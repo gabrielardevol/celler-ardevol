@@ -1,4 +1,4 @@
-  <div class="grid" style = "display: grid; grid-template-columns: 1fr 1fr; align-items: center;">
+  <div class="grid">
     <%@landing_page_cat.each_with_index do |section, index|%>
 
       <%if (index % 2 == 0)%>
@@ -13,10 +13,10 @@
       ) %>
       <%end%>
 
-      <div style= "padding: 2em 3em; <%= (index % 2 == 0)? "padding-right: 6em" : "padding-left: 6em"%>">
+      <div class = "grid-padding" style= "<%= (index % 2 == 0)? "padding-right: 6em" : "padding-left: 6em"%>">
         <h2> <%=section[:section]%></h2>
 
-        <p class="regular-text" style = >
+        <p>
         <%= section[:content]%>
         </p>
         <a href="/history">Llegeix-ne més</a>
