@@ -52,7 +52,7 @@ WINES_CAT =
     aging_type: "bota de roure francès 'Allier' de 225 litres",
     varieties: {'Syrah': 40, 'Merlot': 35, 'Cabernet Sauvignon': 15, 'Garnatxa Negra': 10},
     alcohol: 15,
-    image: "botella.png",
+    image: "bottles/coma.png",
   },
 
   {
@@ -66,7 +66,7 @@ WINES_CAT =
     aging_type: "bota de roure francès 'Allier' de 225 litres",
     varieties: {'Syrah': 10, 'Merlot': 25, 'Garnatxa Negra': 30, 'Carinyena': 5, 'Cavernet Sauvignon': 10},
     alcohol: 15,
-    image: "botella.png",
+    image: "bottles/terra.png",
   },
 
   {
@@ -80,7 +80,7 @@ WINES_CAT =
     aging_type: "bota de roure francès 'Allier' de 225 litres",
     varieties: {'Syrah': 20, 'Merlot': 3, 'Garnatxa Negra': 45, 'Carinyena': 2, 'Cavernet Sauvignon': 30},
     alcohol: 15,
-    image: "botella.png",
+    image: "bottles/anjoli.png",
   }
 ]
 
