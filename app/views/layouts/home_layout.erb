@@ -12,37 +12,72 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body style="margin: none">
-  <div id="header">
-      <p class="medium-text" style="margin: 0.5em; font-size: 1.8em;">Celler <%= image_tag("logo.png", style: "height: 1em;") %>
-Ardèvol</p>
+  <body>
+
+    <div id = "headertop" style = "
+    height: 14.5vh
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    color: white;
+    width: 100%;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    ">
+    <%= image_tag("logo.png", style: "height: 9vh; margin: auto; margin-top: 1vh; opacity: 1.0;")%>
+    <p class="medium-text" style="margin: auto">Celler Ardèvol</p>
     </div>
 
 
- <div id= "carousel-container" class = "wine"style="">
-      <div id="carousel-items">
-        <img class="carousel-item" src="https://via.placeholder.com/199" style="min-width: 100vw; object-fit: cover">
-        <img class="carousel-item" src="https://via.placeholder.com/800x799" style="min-width: 100vw; object-fit: cover">
+  <div id= "carousel-container" class = ""style="background-color: black; margin-top: -13.5vh">
+    <div id="carousel-items">
+      <div>
+      <%= image_tag "mountain.png", class: "carousel-item", style: "min-width: 100vw; object-fit: cover;" %>
       </div>
-      <%# <button id="prev-button">Previous</button>
-      <button id="next-button">Next</button> %>
+      <img class="carousel-item" src="https://via.placeholder.com/199" style="min-width: 100vw; object-fit: cover">
+      <img class="carousel-item" src="https://via.placeholder.com/800x799" style="min-width: 100vw; object-fit: cover">
     </div>
+    <%# <button id="prev-button">Previous</button>
+    <button id="next-button">Next</button> %>
+  </div>
 
-    <div id="navbar" class="wine">
+
+    <div style="
+      background-color: black;
+      justify-content: space-between;
+      color: white;
+      //display: flex;
+      align-items: center;
+      justify-content: center;
+      font-variant: small-caps;
+
+      position: -webkit-sticky; /* Safari */
+      position: sticky;
+      top: 0;
+      padding: 4.24px">
       <a class="navbar-item whitelink" href="/about">Qui sóm?</a>
       <a class="navbar-item whitelink" href="/wines">Els vins</a>
+      <a class="navbar-item whitelink" href="/history">Història</a>
       <a class="navbar-item whitelink" href="/contact">Contacte</a>
     </div>
 
+
     <div class="main-container">
+
     <%= yield %>
+
     </div>
 
-
-  <div id="footer" class="wine white-text" style="text-align: center; margin-bottom: none">Celler Ardèvol <br> contact info <br> website by <br> something else </div>
-
-
+  <div id="footer" class=" white-text" style=" background-color: black; text-align: center; margin-bottom: none">Celler Ardèvol <br> contact info <br> website by <br> something else </div>
   </body>
+
+
+
+
+
 
   <script>
   var carouselContainer = document.getElementById("carousel-container");
@@ -50,23 +85,26 @@ Ardèvol</p>
   var carouselItems = document.querySelector(".carousel-items");
 
 function headerColorChange() {
-  var header = document.getElementById("header");
+  var header = document.getElementById("headertop");
   var rect = carouselContainer.getBoundingClientRect();
   var carouselPosition = rect.bottom + window.pageYOffset;
   let headerHeight = header.offsetHeight;
   let carouselHeight = carouselContainer.offsetHeight;
 
   window.onscroll = function() {
-    if(window.pageYOffset >= (carouselPosition - headerHeight)){
-     // header.style.backgroundColor = "grey"}
-      header.classList.add("wine")}
+    if(window.pageYOffset >= (carouselPosition + headerHeight)){
+      //header.style.backgroundColor = "black";
+      //header.style.position = "absolute" }
+     // header.classList.add("blackbg")
+     }
     else {
-     // header.style.backgroundColor = "transparent"
-      header.classList.remove("wine")}
+      header.style.backgroundColor = "transparent";
+     // header.style.position = "sticky"
+     }
+     // header.classList.remove("blackbg")}
     function opacityCarousel() {
-     //console.log(window.pageYOffset / carouselHeight)
+     console.log(window.pageYOffset / carouselHeight)
      carouselItem.style.opacity = 1 - (window.pageYOffset / carouselHeight)
-
     }
     opacityCarousel()
   }

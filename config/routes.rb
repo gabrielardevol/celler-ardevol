@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
 
   get "contact", to: "pages#contact"
+  get "history", to: "pages#history"
+
   get "testing", to: "pages#testing"
 #   get "gridtesting", to: "pages#gridtesting"
 #   get "porfoli", to: "pages#porfoli"

@@ -14,15 +14,26 @@
 
   <body style="margin: none">
 
-  <div id="header" class= "wine">
-    <a href="/" class= "whitelink">
-    <p class="medium-text whitelink" style="margin: 0.5em; font-size: 1.8em;">Celler <%= image_tag("logo.png", style: "height: 1em;") %> Ardèvol</p>
-    </a>
-  </div>
+ <div id = "headertop" style = "
+    height: 14.5vh
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    color: white;
+    width: 100%;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 1fr;
+    ">
+    <%= image_tag("logo.png", style: "height: 9vh; margin: auto; margin-top: 1vh")%>
+    <p class="medium-text" style="margin: auto">Celler Ardèvol</p>
+    </div>
 
     <div id="navbar" class="wine">
       <a class="navbar-item whitelink" href="/about">Qui sóm?</a>
       <a class="navbar-item whitelink" href="/wines">Els vins</a>
+      <a class="navbar-item whitelink" href="/history">Història</a>
       <a class="navbar-item whitelink" href="/contact">Contacte</a>
     </div>
     <div class="main-container">
