@@ -1,7 +1,13 @@
 @import "header";
 
+h2 {
+  margin: 0px;
+  padding: 0px;
+}
+
 .grid {
   display: grid; grid-template-columns: 1fr 1fr; align-items: center;
+  font-size: large;
 }
 .grid-padding {
   padding: 2em 3em;

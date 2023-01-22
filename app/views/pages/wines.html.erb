@@ -1,0 +1,37 @@
+<div><%=@wines_cat[0]%></div>
+
+<div class="grid">
+
+
+  <%@wines_cat[1..-1].each_with_index do |wine, index|%>
+
+    <%if (index % 2 == 0)%>
+    <%= content_tag(:div,"" ,class: "grid-image-container", style:
+    "background-image: url(#{asset_path wine[:image]});background-size: contain;
+   "
+    ) %>
+    <%end%>
+
+    <div class="grid-padding" style= "<%= (index % 2 == 0)? "padding-right: 6em" : "padding-left: 6em"%>">
+      <h2> <%=wine[:name]%></h2>
+
+      <p>
+      <%= wine[:concept]%>
+      </p>
+
+
+      <ul>
+      <% wine[:varieties].sort_by{|key, value| value}.reverse.each do |variety|%>
+      <li><%=variety[0]%>: <%=variety[+1]%>%</li>
+      <% end %>
+      </ul>
+    </div>
+
+    <%if (index % 2 != 0)%>
+    <%= content_tag(:div,"" ,class: "grid-image-container", style:
+    "background-image: url(#{asset_path wine[:image]}); background-size: contain;
+   "
+    ) %>
+    <%end%>
+  <%end%>
+</div>

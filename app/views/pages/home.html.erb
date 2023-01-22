@@ -1,6 +1,7 @@
-  <div class="grid">
+    <div style="width: 50%; margin: auto; text-align: center; padding: 1em 0em"><%=@about_cat[0][:content]%></div>
     <%@landing_page_cat.each_with_index do |section, index|%>
-
+    <div style="padding: 0.2em; text-align: center; background-color: black; color: white; font-size: 1.2em"><%=section[:section]%></div>
+    <div class="grid">
       <%if (index % 2 == 0)%>
       <%= content_tag(:div,"" ,class: "image-container", style:
       "background-image: url(#{asset_path section[:image]});
@@ -14,11 +15,9 @@
       <%end%>
 
       <div class = "grid-padding" style= "<%= (index % 2 == 0)? "padding-right: 6em" : "padding-left: 6em"%>">
-        <h2> <%=section[:section]%></h2>
-
-        <p>
-        <%= section[:content]%>
-        </p>
+        <%# <h2> <%=section[:section]%>
+        <%# </h2> %>
+        <p><%= section[:content]%></p>
         <a href="/history">Llegeix-ne més</a>
       </div>
 
@@ -33,5 +32,6 @@
       min-height: 10em"
       ) %>
       <%end%>
-    <%end%>
-  </div>
+
+    </div>
+  <%end%>

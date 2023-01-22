@@ -1,40 +1,49 @@
 
-<div class="mapouter">
-  <div class="gmap_canvas">
-    <iframe
-    style="width: 100%; height: 21em"
-    <%# width="250" height="500"  %>
-    <%# id="gmap_canvas"  %>
-    src="https://maps.google.com/maps?q=carrer%20barceloneta%2014%20porrera&t=k&z=19&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-    </iframe>
-    <br>
-    <%# <style>.mapouter{text-align:right;height:500px;width:250px;}</style> %>
-    <%# <a href="https://www.embedgooglemap.net">embedgooglemap.net</a> %>
-    <%# <style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:250px;}</style> %>
+
+
+
+
+<div class="grid" style = "margin: auto; display: grid; grid-template-columns: 1fr 1fr; align-items: center;">
+
+  <div class="grid1" style="background-color: red; height: 100%">
+    <div class="mapouter">
+      <div>
+        <iframe
+        style="width: 100%; height: 71vh; margin-bottom: -5px"
+        <%# width="250" height="500"  %>
+        <%# id="gmap_canvas"  %>
+        src="https://maps.google.com/maps?q=carrer%20barceloneta%2014%20porrera&t=k&z=19&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+        </iframe>
+
+        <%# <style>.mapouter{text-align:right;height:500px;width:250px;}</style> %>
+        <%# <a href="https://www.embedgooglemap.net">embedgooglemap.net</a> %>
+        <%# <style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:250px;}</style> %>
+      </div>
+    </div>
   </div>
-</div>
 
 
-
-<div class="grid" style = "width: 60%; margin: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3%; align-items: center;">
-
-<div style="">
-
-
-
-</div>
-<%# https://google-map-generator.com/  %>
-
-<div style="">
-cellerardevol@yahoo.es <br>
-639853282 <br>
-Carrer Barceloneta, 1443739 Porrera, Tarragona
-</div>
+  <div class="grid-padding" style="">
+  <%=@contact_cat[0]%>
+  <% @contact_cat[1..-1].each do |item|%>
+  <li><%=item%></li>
+  <%end%>
+  </div>
 
 
 </div>
 
 <script>
-container = document.getElementsByClassName("main-container");
-console.log(container.style)
+function resizeMap() {
+header = document.querySelector("header");
+navbar = document.querySelector(".navbar");
+footer = document.querySelector("footer");
+iframe = document.querySelector("iframe");
+iframe.style.height = `${(window.innerHeight - header.offsetHeight - footer.offsetHeight - navbar.offsetHeight)}px`;
+}
+
+
+window.onload = resizeMap()
+window.addEventListener("resize", resizeMap);
+
 </script>

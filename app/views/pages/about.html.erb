@@ -1,1 +1,26 @@
-about
+
+<div class="grid">
+  <%@about_cat.each_with_index do |section, index|%>
+
+    <%if (index % 2 == 0)%>
+    <%= content_tag(:div,"" ,class: "grid-image-container", style:
+    "background-image: url(#{asset_path section[:image]});"
+    ) %>
+    <%end%>
+
+    <div class="grid-padding" style= "<%= (index % 2 == 0)? "padding-right: 6em" : "padding-left: 6em"%>">
+      <h2> <%=section[:title]%></h2>
+
+      <p>
+      <%= section[:content]%>
+      </p>
+    </div>
+
+    <%if (index % 2 != 0)%>
+    <%= content_tag(:div,"" ,class: "grid-image-container", style:
+    "background-image: url(#{asset_path section[:image]});
+   "
+    ) %>
+    <%end%>
+  <%end%>
+</div>
