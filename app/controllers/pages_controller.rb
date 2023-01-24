@@ -30,7 +30,6 @@ class PagesController < ApplicationController
   def testing
   end
 
-
   def history
     @history_cat = @@history_cat
   end

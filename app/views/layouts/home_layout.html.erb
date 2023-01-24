@@ -13,21 +13,25 @@
   </head>
 
   <body>
-
+  <header></header>
+<%#
     <header style = "
-position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  background-color: transparent;
-
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    background-color: transparent;
     ">
-    <%= image_tag("logo.png", style: "height: 9vh; margin: auto; margin-top: 1vh; opacity: 1.0;")%>
-    <p class="medium-text" style="margin: auto">Celler Ardèvol</p>
-    </header>
 
 
-  <div id= "carousel-container" class = ""style="background-color: black; margin-top: -14.5vh; height: 100vh;">
+    <%= image_tag("logo.png", style: "height: 9vh; margin: auto; margin-top: 1vh; opacity: 1.0;", id: "logo")
+    <p id="logo-text" style="margin: auto">Celler Ardèvol</p>
+
+
+    </header> %>
+
+
+  <div id= "carousel-container" class = ""style="background-color: black; margin-top: 0vh; height: 100vh;">
     <div id="carousel-items">
       <div>
       <%= image_tag("mountain.png", class: "carousel-item", style: "object-fit: cover; height: 100vh; width: 100%;") %>
@@ -61,30 +65,23 @@ position: -webkit-sticky; /* Safari */
 
 
   <script>
+
   var carouselContainer = document.getElementById("carousel-container");
   var carouselItem = document.querySelector(".carousel-item");
   var carouselItems = document.querySelector(".carousel-items");
+  var header = document.querySelector("header");
 
 function headerColorChange() {
-  var header = document.querySelector("header");
   var rect = carouselContainer.getBoundingClientRect();
   var carouselPosition = rect.bottom + window.pageYOffset;
   let headerHeight = header.offsetHeight;
   let carouselHeight = carouselContainer.offsetHeight;
-
   window.onscroll = function() {
     if(window.pageYOffset >= (carouselPosition + headerHeight)){
-      //header.style.backgroundColor = "black";
-      //header.style.position = "absolute" }
-     // header.classList.add("blackbg")
      }
     else {
-      //header.style.backgroundColor = "transparent";
-     // header.style.position = "sticky"
      }
-     // header.classList.remove("blackbg")}
     function opacityCarousel() {
-     console.log(window.pageYOffset / carouselHeight)
      carouselItem.style.opacity = 1 - (window.pageYOffset / carouselHeight)
     }
     opacityCarousel()
@@ -98,22 +95,35 @@ function handleResize() {
   headerColorChange()
 }
 
+//  console.log("hello")
+function headerStickness() {
+  var logoImg = document.querySelector("#logo");
+  var logoText = document.querySelector("#logo-text");
+  var logo = logoImg + logoText
+  //console.log(logo)
+  console.log(header.offsetHeight)
+  console.log(window.pageYOffset, screen.height)
 
-currentIndex = 1
- nextButton = document.getElementById("next-button")
- prevButton = document.getElementById("prev-button")
+  window.addEventListener('scroll', function() {
+    if(window.pageYOffset > (screen.height-header.offsetHeight) && window.pageYOffset < screen.height){
+      header.style.top = `-${header.offsetHeight - (screen.height - window.pageYOffset)}px`
+      } else if (window.pageYOffset > screen.height ) {
+      header.style.top = `-${header.offsetHeight}px`
+      } else {
+      header.style.top = `0px`
+      }
+  })
 
- nextButton.addEventListener('click', () => {
-  console.log("click")
-  currentIndex++;
-  carouselItem.style.transform = `translateX(${-currentIndex * 100}%)`;
-});
+
+ }
+headerStickness()
 
 
- prevButton.addEventListener('click', () => {
-  console.log("clickprev")
-  currentIndex--;
-  carouselItem.style.transform = `translateX(${+currentIndex * 100}%)`;
-});
+
+
+
+
+
+
 </script>
 </html>
