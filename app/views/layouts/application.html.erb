@@ -12,29 +12,29 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body style="margin: none">
+  <body style="margin: none;">
 
-    <a href="/">
-    <header>
-        <div class="logo" style="margin:auto; text-align: center">
+    <a href="/" style="text-decoration: none">
+    <header style="padding: 0.5em 0em">
+        <div class="logo" style="margin:auto; text-align: center;">
           <%= image_tag("logo.png", style: "height: 9vh")%>
-          <div class="medium-text" style="margin: auto">Celler Ardèvol</div>
+          <div class="medium-text whitelink" style="margin: auto;">Celler Ardèvol</div>
         </div>
       </header>
     </a>
 
     <div class="navbar">
-      <a class="navbar-item whitelink" href="/about">Qui sóm?</a>
-      <a class="navbar-item whitelink" href="/wines">Els vins</a>
+      <a class="navbar-item whitelink" href="/about">Nosaltres</a>
+      <a class="navbar-item whitelink" href="/wines">El vi</a>
       <a class="navbar-item whitelink" href="/history">Història</a>
       <a class="navbar-item whitelink" href="/contact">Contacte</a>
     </div>
 
-    <div class="main-container">
+    <div class="main-container" style="min-height: 63.8vh">
     <%= yield %>
     </div>
 
-    <footer style=" background-color: black; text-align: center; margin-bottom: none">Celler Ardèvol <br> contact info <br> website by <br> something else </footer>
+    <footer>Celler Ardèvol <br> contact info <br> website by <br> something else </footer>
 
   </body>
 </html>

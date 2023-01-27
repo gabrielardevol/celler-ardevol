@@ -12,7 +12,10 @@
     ) %>
     <%end%>
 
-    <div class="grid-padding" style= "<%= (index % 2 == 0)? "padding-right: 6em" : "padding-left: 6em"%>">
+    <div class="grid-padding <%= (index % 2 == 0)? "padding-right" : "padding-left"%>" style= "">
+         <%= content_tag(:div,"" ,class: "small-image-container", style:
+        "background-size: contain; background-image: url(#{asset_path wine[:image]});"
+        ) %>
       <h2> <%=wine[:name]%></h2>
 
       <p>

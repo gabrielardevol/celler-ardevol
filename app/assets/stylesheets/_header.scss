@@ -1,6 +1,81 @@
 header {
   color: white;
-  background-color: black;
-  display: grid;
-  grid-template-columns: 1fr;
+  background-color: $wine;
+}
+
+#carousel-container {
+  background-color: $wine; margin-top: 0vh; height: 100vh;
+}
+
+#carousel-layout {
+  width: inherit;
+  //height: 100vh;
+  position: relative; display: flex; justify-content: center
+}
+
+.carousel-item {
+  position: absolute;
+  height: 100vh;
+  width: inherit;
+  object-fit: cover;
+  background-position: center;
+}
+
+.carousel-items {
+  width: 100%; height: 100vh; background-color: black
+}
+
+.navbar {
+  background-color: $wine;
+  justify-content: space-between;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-variant: small-caps;
+  height: 4vh;
+  margin-top: -1px;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+.navbar-item {
+  color: white;
+  padding: 0em 1em
+}
+
+.navbar-item:hover {
+  background-color: grey;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+  }
+
+  @keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+
+iframe {
+width: 100%; height: 71vh; margin-bottom: -8px
+}
+
+
+@media only screen and (max-width: 700px) {
+  #carousel-layout, #carousel-container, .carousel-item, .carousel-items {
+    height:75vh;
+  }
 }

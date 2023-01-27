@@ -7,12 +7,16 @@
     ) %>
     <%end%>
 
-    <div class="grid-padding" style= "<%= (index % 2 == 0)? "padding-right: 6em" : "padding-left: 6em"%>">
-      <h2> <%=section[:title]%></h2>
+    <div class=" " style= "">
+    <%= content_tag(:div,"" ,class: "small-image-container", style:
+        "background-image: url(#{asset_path section[:image]});"
+        ) %>
 
-      <p>
+      <div class = "grid-padding <%= (index % 2 == 0)? "padding-right" : "padding-left"%>">
+            <h2> <%=section[:title]%></h2>
+
       <%= section[:content]%>
-      </p>
+      </div>
     </div>
 
     <%if (index % 2 != 0)%>
