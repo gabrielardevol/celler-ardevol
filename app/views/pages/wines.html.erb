@@ -1,4 +1,8 @@
-<div><%=@wines_cat[0][:content]%></div>
+<div style="padding: 1em 6em; background-color: white">
+<p style="color: red">Pròximament: conceptes, puntuacions i notes de cata</p>
+  <h2>El celler en dades</h2>
+  <div><%=@wines_cat[0][:content]%></div>
+</div>
 
 <div class="grid">
 
@@ -18,7 +22,7 @@
         ) %>
       <h2> <%=wine[:name]%></h2>
 
-      <p>
+      <p style="display:none">
       <%= wine[:concept]%>
       </p>
 

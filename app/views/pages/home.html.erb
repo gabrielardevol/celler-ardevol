@@ -1,6 +1,15 @@
-    <div class= "first-text padding-right padding-left"style="width: 70%; margin: auto; text-align: center;"><%=@about_cat[0][:content]%></div>
+    <div class= "first-text padding-right padding-left"style="width: 70%; margin: auto; text-align: center;">
+    <%# <%=@about_cat[0][:content]%>
+    Hola visitant, <br>
+    aquesta pàgina està en construcció. <br>
+    Hi ha algun text que coixeja, i alguna foto millorable. <br>
+    La teva opinió serà benvinguda! <br>
+    Gabriel Ardèvol
+    </div>
+
+
     <%@landing_page_cat.each_with_index do |section, index|%>
-    <div class="section-header"style="padding: 0.2em; text-align: center; background-color: black; color: white; font-size: 1.2em"><%=section[:section]%></div>
+    <div class="section-header"style=""><%=section[:section]%></div>
     <div class="grid">
 
 
@@ -18,7 +27,7 @@
         <div class = "grid-padding <%= (index % 2 == 0)? "padding-right" : "padding-left"%>" style= "">
           <%# <h2> <%=section[:section]%>
           <%# </h2> %>
-          <p><%= section[:content]%></p>
+          <%= section[:content]%>
           <a href="<%=section[:href]%>">Llegeix-ne més</a>
         </div>
       </div>
