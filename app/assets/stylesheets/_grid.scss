@@ -38,8 +38,9 @@
   .grid {
     grid-template-columns: 1fr;
   }
-  .grid-image-container, .image-container, .big-image-container  {
+  .grid-image-container, .image-container, .big-image-container   {
     height: 0px;
+    display: none
     //min-height: 75vh;
   }
 
