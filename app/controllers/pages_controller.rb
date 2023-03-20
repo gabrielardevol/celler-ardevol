@@ -103,7 +103,7 @@ CONTACT_CAT = [
   def home
     @landing_page_cat = [@@about_cat[0], @@history_cat[0], @@wines_cat[0]]
     @about_cat = @@about_cat
-    render layout: 'home_layout'
+    render layout: 'landing-homepage'
   end
 
   def product

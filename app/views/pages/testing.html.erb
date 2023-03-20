@@ -14,14 +14,14 @@
   <button id="prev-button" style="position: absolute; left: 10vw; top: 49vh; z-index: 2"><</button>
 
   <div  style = " width: 100vw; height: 100vh; ">
-  <%= image_tag("mountain.png", class: "carousel-item") %>
-    <%= image_tag("history/1.jpg", class: "carousel-item", style: "opacity: 0") %>
-        <%= image_tag("buildings/1.jpg", class: "carousel-item", style: "opacity: 0") %>
+  <%= image_tag("mountain.png", class: "carousel-image") %>
+    <%= image_tag("history/1.jpg", class: "carousel-image", style: "opacity: 0") %>
+        <%= image_tag("buildings/1.jpg", class: "carousel-image", style: "opacity: 0") %>
 
-    <div id="carousel-1" class = "carousel-item" style="background-color: green; opacity: 0;  background-image: url('buildings/1.jpeg');">.</div>
-    <div id="carousel-2" class = "carousel-item" style="background-color: blue; opacity: 0">.</div>
-    <div id="carousel-3" class = "carousel-item" style="background-color: red; opacity: 0">.</div>
-    <div id="carousel-4" class = "carousel-item" style="background-color: yellow; opacity: 0">.</div>
+    <div id="carousel-1" class = "carousel-image" style="background-color: green; opacity: 0;  background-image: url('buildings/1.jpeg');">.</div>
+    <div id="carousel-2" class = "carousel-image" style="background-color: blue; opacity: 0">.</div>
+    <div id="carousel-3" class = "carousel-image" style="background-color: red; opacity: 0">.</div>
+    <div id="carousel-4" class = "carousel-image" style="background-color: yellow; opacity: 0">.</div>
   </div>
 </div>
 
@@ -29,7 +29,7 @@
 <script>
     var nextButton = document.querySelector("#next-button");
     var prevButton = document.querySelector("#prev-button");
-    var images = document.querySelectorAll(".carousel-item");
+    var images = document.querySelectorAll(".carousel-image");
     var item2 = document.querySelector("#carousel-2");
     // Add click event listener to the button
     var currentImageIndex = 0

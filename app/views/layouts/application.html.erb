@@ -2,39 +2,20 @@
 <html>
   <head>
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
-
     <title>Celler Ardevol</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body style="margin: none;">
-
-    <a href="/" style="text-decoration: none">
-    <header style="padding: 0.5em 0em">
-        <div class="logo" style="margin:auto; text-align: center;">
-          <%= image_tag("logo.png", style: "height: 9vh")%>
-          <div class="medium-text whitelink" style="margin: auto;">Celler Ardèvol</div>
-        </div>
-      </header>
-    </a>
-
-    <div class="navbar">
-      <a class="navbar-item whitelink" href="/about">Nosaltres</a>
-      <a class="navbar-item whitelink" href="/wines">El vi</a>
-      <a class="navbar-item whitelink" href="/history">Història</a>
-      <a class="navbar-item whitelink" href="/contact">Contacte</a>
-    </div>
-
+    <%= render "shared/header" %>
+    <%= render "shared/navbar" %>
     <div class="main-container" style="min-height: 63.8vh">
     <%= yield %>
     </div>
-
-  <footer> !WEB EN CONSTRUCCIÓ! <br> Celler Ardèvol i associats, S.L.<br> telf: +39 639 85 32 82 <br> Porrera, Espanya; CP: 43739 <br> Disseny web: Gabriel Ardèvol</footer>
-
+    <%= render "shared/footer" %>
   </body>
 </html>
