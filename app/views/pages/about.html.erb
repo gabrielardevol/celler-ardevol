@@ -1,30 +1,63 @@
 
 <div class="grid">
-  <%@about_cat.each_with_index do |section, index|%>
 
-    <%if (index % 2 == 0)%>
-    <%= content_tag(:div,"" ,class: "grid-image-container", style:
-    "background-image: url(#{asset_path section[:image]});"
-    ) %>
-    <%end%>
+  <%= content_tag(:div,"" ,class: "grid-image-container", style: "background-image: url(#{asset_path "people/1.jpg"});")%>
+  <%= image_tag "people/1.jpg", class:"image-for-phone" %>
 
-    <div class=" " style= "">
-    <%= content_tag(:div,"" ,class: "small-image-container", style:
-        "background-image: url(#{asset_path section[:image]});"
-        ) %>
+  <div>
+    <div class="grid-padding" lang="ca">
+      Som una petita empresa familiar fundada per Josep Ardèvol, viticultor i també pare. Ell va iniciar amb la replantació de la vinya familiar al 1995, quan el Priorat començava a valorar-se com a regió vinícola. Quatre anys després començava a produir el vi que ara coneixem, a partir de la fundació del celler juntament amb el seu germà Albert i la Roser Galceràn com a socis, i la Raquel en l’administració, i un poc més tard la Roser Amorós com a enòloga i el Ricard Zamora en l’apartat comercial. Gràcies a aquest projecte, el nostre pare va poder viatjar arreu del món i conèixer a moltes persones, de les quals moltes l’acompanyarien durant tota la vida. Amb la seva peculiar manera de fer i la seva proximitat, des del petit poble de Porrera va obrir-nos una finestra al món. Actualment el Celler Ardèvol és el setè més antic del poble.
+    </div>
+    <div class="grid-padding" lang="es">
+      Somos una pequeña empresa familiar fundada por Josep Ardèvol, viticultor y también padre. Él empezó con la replantación de la viña familiar en 1995, cuando el Priorat comenzaba a valorarse como región vinícola. Cuatro años después empezó a producir el vino que ahora conocemos, a partir de la fundación de la bodega junto con su hermano Albert y Roser Galceràn como socios, y Raquel en la administración, y un poco más tarde Roser Amorós como enóloga y Ricard Zamora en el apartado comercial. Gracias a este proyecto, nuestro padre pudo viajar por todo el mundo y conocer a muchas personas, muchas de las cuales lo acompañarían durante toda la vida. Con su peculiar manera de hacer y su proximidad, desde el pequeño pueblo de Porrera nos abrió una ventana al mundo. Actualmente, Celler Ardèvol es la séptima bodega más antigua del pueblo.
+    </div>
+    <div class="grid-padding" lang="en">
+      We are a small family business founded by Josep Ardèvol, a viticulturist and also a father. He began with the replanting of the family vineyard in 1995, when Priorat was beginning to be valued as a wine region. Four years later, he began producing the wine that we now know, with the foundation of the winery together with his brother Albert and Roser Galceràn as partners, and Raquel in administration, and a little later Roser Amorós as winemaker and Ricard Zamora in the commercial area. Thanks to this project, our father was able to travel all over the world and meet many people, many of whom would accompany him throughout his life. With his unique way of doing things and his proximity, from the small town of Porrera, he opened a window to the world for us. Currently, Celler Ardèvol is the seventh oldest winery in the town.
+    </div>
+    <div class="grid-padding" lang="ja">
+      私たちは、ヴィティカルチャーであり、また父親でもあるJosep Ardèvolによって設立された小さな家族経営の企業です。彼は1995年に家族のブドウ畑の再植林を開始し、プリオラートがワイン産地として評価され始めたときでした。4年後、彼は兄弟のアルバートとパートナーであるRoser Galceràn、および管理部門のRaquel、そして後に醸造家のRoser Amorósと商業部門のRicard Zamoraと共に、私たちが今知っているワインの生産を開始しました。このプロジェクトのおかげで、私たちの父親は世界中を旅し、多くの人々に出会うことができ、彼らの多くは彼の人生を共にしました。彼の独自のやり方と近さで、ポレラという小さな町から世界に向けて窓を開けました。現在、セレル・アルデボルは町で7番目に古いワイナリーです。
+    </div>
+  </div>
 
-      <div class = "grid-padding <%= (index % 2 == 0)? "padding-right" : "padding-left"%>">
-            <h2> <%=section[:title]%></h2>
+  <%= image_tag "people/2.jpg", class:"image-for-phone"  %>
+  <div>
 
-      <%= section[:content]%>
+    <div>
+      <div class="grid-padding" lang="ca">
+        La nostra identitat és prioratina, austera com la mateixa llicorella: som una empresa petita i familiar, i allò que coneixem bé és la terra, el raïm i el vi. Aquest és el producte que genuïnament oferim, acompanyats sempre per la bona enologia. Actualment, l'empresa la portem la Raquel i els fills, distribuïts de forma que el Max s’encarrega de la viticultura i del celler amb el suport de l’Albert i la Niruta, la Raquel s’encarrega de l’administració i la direcció, de la coordinació i de fer de mare i el Gabriel de la web i de la identitat de marca. També seguim comptant amb el suport de la Roser Amorós com a enòloga i el Ricard Zamora com a comercial. L’Anjoli pren el relleu de la Roser com a sòcia corporativa. I seguim comptant també amb tanta altra gent de Porrera i del Priorat, que d’una forma o altra ens presten el seu suport amb el cooperativisme propi de la nostra comarca.
+      </div>
+      <div class="grid-padding" lang="es">
+        La historia del vino del Priorat se remonta a hace más de ocho siglos, cuando unos monjes procedentes de la Provenza francesa establecieron la Cartuja de Scala Dei a los pies del Montsant, en la actual Escaladei. Constaba que en el año 1194 se establecieron las primeras viñas en el suelo de llicorella, la característica pizarra prioratina. Durante estos siglos de viticultura litúrgica se introdujeron variedades de uva como la cariñena o la garnacha, que todavía se encuentran en la región en la actualidad. Bajo el dominio de los cartujanos se encontraban los nueve pueblos del que hoy conocemos como Priorat antiguo, entre ellos Porrera.
+      </div>
+      <div class="grid-padding" lang="en">
+        The history of Priorat wine dates back more than eight centuries, when monks from the French Provence established the Scala Dei Charterhouse at the foot of Montsant, in the current Escaladei. It is known that in the year 1194 the first vineyards were planted in the llicorella soil, the characteristic Priorat slate. During these centuries of liturgical viticulture, grape varieties such as cariñena or garnacha were introduced, which still remain in the region today. Under the dominion of the Carthusians were the nine villages that we now know as the ancient Priorat, among them Porrera.
+      </div>
+      <div class="grid-padding" lang="ja">
+        プリオラートのワインの歴史は800年以上さかのぼります。フランスのプロヴァンス地方からやってきた修道士たちは、現在のエスカラデイにあるモンサントの麓にスカラデイのカルトジョを設立しました。1194年には、プリオラートの特徴であるリコレリャ地盤に最初のブドウ畑が植えられたことが知られています。礼拝用のブドウ栽培が行われたこれらの数世紀の間に、カリニェナやガルナチャなどのブドウ品種が導入されました。これらの品種は現在でも地域で栽培されています。カルトジョによる支配下にあったのは、現在の古代プリオラートとして知られる9つの村のうちの1つ、ポレラも含まれていました。
       </div>
     </div>
 
-    <%if (index % 2 != 0)%>
-    <%= content_tag(:div,"" ,class: "grid-image-container", style:
-    "background-image: url(#{asset_path section[:image]});
-   "
-    ) %>
-    <%end%>
-  <%end%>
+  </div>
+
+    <%= content_tag(:div,"" ,class: "grid-image-container", style: "background-image: url(#{asset_path "people/2.jpg"});") %>
 </div>
+
+
+
+<script>
+
+function changeLanguage(lang) {
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll( ` [lang]:not([lang=${lang}]) ` ).forEach(element => element.style.display = "none")
+document.querySelectorAll(`[lang=${lang}]`).forEach(element => {
+  if (element.classList.contains('ellipse-text')) {
+    element.style.display = '-webkit-box';
+  } else {
+    element.style.display = 'block';
+  }
+});
+}
+console.log(document.documentElement.lang)
+window.onload = changeLanguage(document.documentElement.lang)
+</script>

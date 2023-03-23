@@ -1,29 +1,90 @@
 <div class="grid">
-  <%@history_cat.each_with_index do |section, index|%>
 
-    <%if (index % 2 == 0)%>
-    <%= content_tag(:div,"" ,class: "grid-image-container", style:
-    "background-image: url(#{asset_path section[:image]});"
-    ) %>
-    <%end%>
+  <%= content_tag(:div,"" ,class: "grid-image-container", style: "background-image: url(#{asset_path "people/1.jpg"});")%>
+  <%= image_tag "history/field.JPG", class:"image-for-phone" %>
 
-    <div class=" " style= "">
-    <%= content_tag(:div,"" ,class: "small-image-container", style:
-        "background-image: url(#{asset_path section[:image]});"
-        ) %>
+  <div>
+    <div class="grid-padding" lang="ca">
+      La història del vi del Priorat es remunta a fa més de vuit segles, quan uns monjos provinents de la Provença francesa van assentar la Cartoixa de Scala Dei als peus del Montsant, en l’actual Escaladei. Consta que l’any 1194 s’estableixen les primeres vinyes en el sòl de llicorella, la característica pissarra prioratina. Durant aquests segles de viticultura litúrgica s'introduïren varietats de raïm com la carinyena o la garnatxa, que encara romanen en la regió avui dia. Sota el domini dels cartoixans es trobaven els nou pobles del que avui coneixem com a Priorat antic, d’entre ells Porrera.
+    </div>
+    <div class="grid-padding" lang="es">
+      La historia del vino del Priorat se remonta a hace más de ocho siglos, cuando unos monjes provenientes de la Provenza francesa se establecieron en la Cartuja de Scala Dei, a los pies del Montsant, en la actual Escaladei. Consta que en el año 1194 se establecen las primeras viñas en el suelo de licorella, la característica pizarra prioratina. Durante estos siglos de viticultura litúrgica se introdujeron variedades de uva como la cariñena o la garnacha, que todavía permanecen en la región hoy en día. Bajo el dominio de los cartujanos se encontraban los nueve pueblos de lo que hoy conocemos como Priorat antiguo, entre ellos Porrera.
+    </div>
+    <div class="grid-padding" lang="en">
+      The history of Priorat wine dates back over eight centuries, when monks from the French province of Provence settled in the Scala Dei Charterhouse at the foot of Montsant, in present-day Escaladei. It is known that in the year 1194 the first vineyards were established in the soil of licorella, the characteristic Priorat slate. During these centuries of liturgical viticulture, grape varieties such as cariñena or garnacha were introduced, which still remain in the region today. Under the dominion of the Carthusians were the nine villages that we now know as the ancient Priorat, including Porrera.
+    </div>
+    <div class="grid-padding" lang="ja">
+      プリオラットワインの歴史は、フランスのプロヴァンス地方出身の修道士たちが、現在のエスカラデイに位置するモンサントの麓にあるスカラデイ修道院に入植した約8世紀以上前までさかのぼります。1194年には、特徴的なプリオラットの板岩の土壌に最初のブドウ畑が確立されました。礼拝のためのブドウ栽培が続く数世紀の間に、カリニェナやガルナッチャなどのブドウ品種が導入され、現在でもこの地域で栽培されています。カルトジャンの支配下にあったのは、ポレラを含む9つの村であり、現在の古代プリオラットとして知られています。
+    </div>
+  </div>
 
-      <div class = "grid-padding <%= (index % 2 == 0)? "padding-right" : "padding-left"%>">
-<%#          <h2> <%=section[:title]%>
+  <%= image_tag "people/2.jpg", class:"image-for-phone"  %>
+  <div>
 
-      <%= section[:content]%>
+    <div>
+      <div class="grid-padding" lang="ca">
+        El 1836, amb la política agrícola de la desamortització de Mendizábal, es van suprimir els terrenys eclesiàstics i moltes de les vinyes cartoixanes van quedar descuidades, creixent sense manteniment ni guia. La producció entraria aquí en un declivi, rotundament agreujat a finals del XIX amb l’arribada de la coneguda plaga fil·loxera. Molts agricultors, tal com els Ardèvol, van substituir el conreu de la vinya per d’altres com l’avellana i l’ametlla. En els primers anys del segle XX la viticultura del Priorat va continuar en declivi i va ser eclipsada per altres regions vitivinícoles d'Espanya.
+      </div>
+      <div class="grid-padding" lang="es">
+        En 1836, con la política agrícola de la desamortización de Mendizábal, se suprimieron los terrenos eclesiásticos y muchas de las viñas cartujanas quedaron descuidadas, creciendo sin mantenimiento ni guía. La producción entraría aquí en un declive, rotundamente agravado a finales del XIX con la llegada de la conocida plaga filoxera. Muchos agricultores, como los Ardèvol, sustituyeron el cultivo de la viña por otros como la avellana y la almendra. En los primeros años del siglo XX la viticultura del Priorat continuó en declive y fue eclipsada por otras regiones vitivinícolas de España.
+      </div>
+      <div class="grid-padding" lang="en">
+        In 1836, with the agricultural policy of the disentailment of Mendizábal, ecclesiastical lands were suppressed and many of the Carthusian vineyards were left neglected, growing without maintenance or guidance. Production would enter here in a decline, decisively aggravated by the arrival of the well-known phylloxera plague at the end of the 19th century. Many farmers, such as the Ardèvol family, replaced the cultivation of the vine with others such as hazelnut and almond. In the early years of the 20th century, Priorat's viticulture continued to decline and was overshadowed by other wine regions in Spain.
+      </div>
+      <div class="grid-padding" lang="ja">
+        1836年、メンディサバルの農業政策により、教会の土地が廃止され、多くのカルトジャーナーのブドウ畑が手入れをされず、手入れやガイドなしで育ちました。ここで生産は低下し、19世紀末にはフィロキセラとして知られる害虫の到来によって断固として悪化しました。アルデボル一家のように、多くの農家はブドウ畑の栽培をヘーゼルナッツやアーモンドなど他の作物に置き換えました。20世紀初頭には、プリオラットのワイン産業は低迷し、スペインの他のワイン産地に輪をかけて影を落としました。
       </div>
     </div>
 
-    <%if (index % 2 != 0)%>
-    <%= content_tag(:div,"" ,class: "grid-image-container", style:
-    "background-image: url(#{asset_path section[:image]});
-   "
-    ) %>
-    <%end%>
-  <%end%>
+  </div>
+
+    <%= content_tag(:div,"" ,class: "grid-image-container", style: "background-image: url(#{asset_path "people/2.jpg"});") %>
+
+
+
+
+  <%= content_tag(:div,"" ,class: "grid-image-container", style: "background-image: url(#{asset_path "people/1.jpg"});")%>
+  <%= image_tag "history/field.JPG", class:"image-for-phone" %>
+
+  <div>
+    <div class="grid-padding" lang="ca">
+      No és fins a les darreries del segle XX que la comarca comença a recuperar-se gràcies a l'esforç d'un grup de viticultors locals, i també a l'aparició de noves varietats de raïm. Això porta a un augment en la qualitat del vi i un major reconeixement internacionalment, en el que podríem definir com un renaixement vitivinícola de la regió. El vi Priorat passaria de la desestimada venda a granel a ser considerat un producte exclusiu i sibarita. És el 1995, en el context d’aquests primers anys de ressorgiment, que Josep Ardèvol comença amb la replantació de les antigues vinyes familiars en el terme de Porrera, poble natal on es funda el Celler Ardèvol cinc anys després. En aquest mateix any la denominació d’origen prioratina és designada com la segona denominació d’origen qualificada d’Espanya (DOQ), junt amb la Rioja, consolidant l’estatus de la regió. El caràcter dels vins prioratins es deu al sòl de pissarra llicorella, pobre en nutrients i en aigua, en què la vinya ha d’esforçar-se per a prosperar. El fruit resultant és petit i concentrat, dens en sucre, tanins i aroma. Això repercuteix en un vi amb molt de cos, intens i ric. Similar és la proesa de l’agricultor prioratí: el terreny és inclinat i escarpat, inaccessible a grans maquinàries, fent necessari el treball manual. Tanmateix, és per això que les produccions de la DOQ són tan limitades i exclusives, i relativament costoses.
+    </div>
+    <div class="grid-padding" lang="es">
+      No es hasta finales del siglo XX que la comarca comienza a recuperarse gracias al esfuerzo de un grupo de viticultores locales, y también a la aparición de nuevas variedades de uva. Esto lleva a un aumento en la calidad del vino y un mayor reconocimiento internacionalmente, en lo que podríamos definir como un renacimiento vitivinícola de la región. El vino Priorat pasaría de la desestimada venta a granel a ser considerado un producto exclusivo y sibarita. Es en 1995, en el contexto de estos primeros años de resurgimiento, que Josep Ardèvol comienza con la replantación de las antiguas viñas familiares en el término de Porrera, pueblo natal donde se funda el Celler Ardèvol cinco años después. En este mismo año la denominación de origen prioratina es designada como la segunda denominación de origen calificada de España (DOQ), junto con la Rioja, consolidando el estatus de la región. El carácter de los vinos prioratinos se debe al suelo de pizarra llicorella, pobre en nutrientes y en agua, en el que la vid tiene que esforzarse para prosperar. El fruto resultante es pequeño y concentrado, denso en azúcar, taninos y aroma. Esto repercute en un vino con mucho cuerpo, intenso y rico. Similar es la proeza del agricultor prioratí: el terreno es inclinado y escarpado, inaccesible a grandes maquinarias, haciendo necesario el trabajo manual. Sin embargo, es por esto que las producciones de la DOQ son tan limitadas y exclusivas, y relativamente costosas.
+    </div>
+    <div class="grid-padding" lang="en">
+      It wasn't until the late 20th century that the region began to recover thanks to the efforts of a group of local winegrowers, as well as the emergence of new grape varieties. This led to an increase in the quality of the wine and greater international recognition, in what we could define as a viticultural renaissance of the region. Priorat wine went from being disregarded and sold in bulk to being considered an exclusive and indulgent product. It was in 1995, in the context of these first years of resurgence, that Josep Ardèvol began replanting his family's old vineyards in the town of Porrera, his hometown where the Celler Ardèvol was founded five years later. In that same year, the Priorat designation of origin was designated as the second qualified designation of origin in Spain (DOQ), along with Rioja, consolidating the region's status. The character of Priorat wines is due to the slate soil llicorella, poor in nutrients and water, in which the vine has to struggle to thrive. The resulting fruit is small and concentrated, dense in sugar, tannins, and aroma. This translates to a wine with a lot of body, intensity, and richness. Similar is the feat of the Priorat farmer: the terrain is steep and rugged, inaccessible to large machinery, making manual labor necessary. However, this is why DOQ productions are so limited and exclusive, and relatively expensive.
+    </div>
+    <div class="grid-padding" lang="ja">
+      遅くとも20世紀後半まで、この地域が回復するのは、地元のワイン生産者たちの努力や新しいブドウ品種の登場のおかげでした。これにより、ワインの品質が向上し、より国際的な認知が得られるようになり、この地域の葡萄栽培の復興とも呼べる時期が訪れました。Prioratワインは、無視されて大量に販売されていたものから、独占的で贅沢な製品と見なされるようになりました。この復興の最初の年にあたる1995年、Josep Ardèvolは自分の故郷であるポレラの古いブドウ畑を再植し始め、5年後にCeller Ardèvolを設立しました。
+      同年、プリオラットの原産地呼称（DO）が、リオハとともにスペインの2番目の原産地呼称質保証（DOQ）に指定され、地域の地位が確立されました。プリオラットのワインの個性は、栄養素と水分が貧しい片岩の土壌、リコレラによるものであり、葡萄は栄養を取り込むために努力する必要があります。その結果、果実は小さく、濃縮され、糖分、タンニン、香りが濃密になります。これにより、非常に濃厚で、濃縮された、豊かな味わいのワインが生まれます。同様に、プリオラットの農家の技術もすごいものです。地形は傾斜しており、大型の機械では手が届かず、手作業が必要です。しかし、DOQの生産量は非常に限られており、独占的で比較的高価なものになるため、このような技術が必要になります。
+
+    </div>
+  </div>
 </div>
+
+
+
+
+
+
+
+
+
+<script>
+function changeLanguage(lang) {
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll( ` [lang]:not([lang=${lang}]) ` ).forEach(element => element.style.display = "none")
+document.querySelectorAll(`[lang=${lang}]`).forEach(element => {
+  if (element.classList.contains('ellipse-text')) {
+    element.style.display = '-webkit-box';
+  } else {
+    element.style.display = 'block';
+  }
+});
+}
+console.log(document.documentElement.lang)
+window.onload = changeLanguage(document.documentElement.lang)
+</script>

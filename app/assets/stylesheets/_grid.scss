@@ -4,8 +4,15 @@
   color: white;
 }
 
-
-
+.wine-image {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;}
+.grid-image-container {
+  opacity: 0.7;
+  //background-size: contain;
+}
 .ellipse-text {
   display: -webkit-box;
   -webkit-line-clamp: 7;
@@ -20,6 +27,7 @@
   display: flex; align-items: center; justify-content: center; text-align: center;
 }
 
+
 .image-container-left, .image-container-right {
   display: flex; align-items: center; justify-content: center; text-align: center;
 }
@@ -30,16 +38,28 @@
   font-size: clamp(40px, 3.5vw, 50px);
 }
 
+
 @media only screen and (min-width: 400px) {
   .phone-image-container {
     display: none;
   }
 
+
+}
+
+.image-for-phone {
+  display: none;
 }
 
 @media only screen and (max-width: 400px) {
 
   .image-container-left, .image-container-right {
     display: none
+  }
+
+  .image-for-phone {
+    display: block;
+    width: 100%;
+    opacity: 0.7;
   }
 }

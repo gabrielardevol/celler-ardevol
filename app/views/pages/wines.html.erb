@@ -1,49 +1,164 @@
-
-
-
-
 <div class="grid">
 
+  <%= content_tag(:div,"" ,class: "wine-image", style: "background-image: url(#{asset_path "bottles/coma.png"});")%>
+  <%= image_tag "bottles/coma.png", class:"image-for-phone" %>
 
-  <%@wines_cat[1..-1].each_with_index do |wine, index|%>
-
-    <%if (index % 2 == 0)%>
-    <%= content_tag(:div,"" ,class: "grid-image-container", style:
-    "background-image: url(#{asset_path wine[:image]});background-size: contain;
-   "
-    ) %>
-    <%end%>
-
-    <div class="grid-padding <%= (index % 2 == 0)? "padding-right" : "padding-left"%>" style= "">
-         <%= content_tag(:div,"" ,class: "small-image-container", style:
-        "background-size: contain; background-image: url(#{asset_path wine[:image]});"
-        ) %>
-      <h2> <%=wine[:name]%></h2>
-
-      <p>
-      <%= wine[:concept]%>
-      </p>
-
-
+  <div class="grid-padding">
+    <h2>Coma d'en Romeu</h2>
+    <div lang="ca">
+      És el primer vi que vam produïr, i pren per nom el topònim d’una de les nostres finques. És dels nostres vins el que més expressa el sabor tradicional prioratí en la seva autenticitat, amb una subtilesa sòbria.
       <ul>
-      <% wine[:varieties].sort_by{|key, value| value}.reverse.each do |variety|%>
-      <li><%=variety[0]%>: <%=variety[+1]%>%</li>
-      <% end %>
+      <li>Syrah: 40%</li>
+      <li>Merlot: 35%</li>
+      <li>Cabernet Sauvignon: 15%</li>
+      <li>Garnatxa Negra: 10%</li>
+      </ul>
+    </div>
+    <div lang="es">
+      Es el primer vino que produjimos y lleva de nombre el topónimo de una de nuestras fincas. Es de nuestros vinos el que más expresa el sabor tradicional del priorat en su autenticidad, con una sutileza sobria.
+      <ul>
+      <li>Syrah: 40%</li>
+      <li>Merlot: 35%</li>
+      <li>Cabernet Sauvignon: 15%</li>
+      <li>Garnacha Negra: 10%</li>
+      </ul>
+    </div>
+    <div lang="en">
+      It is the first wine we produced, and takes the name of the toponym of one of our estates. It is our wine that best expresses the traditional Priorat flavor in its authenticity, with a sober subtlety. The grape composition is as follows:
+      <ul>
+      <li>Syrah: 40%</li>
+      <li>Merlot: 35%</li>
+      <li>Cabernet Sauvignon: 15%</li>
+      <li>Black Grenache: 10%</li>
+      </ul>
+    </div>
+    <div lang="ja">
+      これは私たちが初めて生産したワインで、私たちの一つの地所の地名を冠しています。私たちのワインの中で、最も本格的なプリオラットの味を控えめなニュアンスで表現しています。ブドウの組成は以下の通りです：
+      <ul>
+      <li>シラー：40％</li>
+      <li>メルロー：35％</li>
+      <li>カベルネ・ソーヴィニヨン：15％</li>
+      <li>ブラックグルナッシュ：10％</li>
+      </ul>
+    </div>
+  </div>
+
+  <%= image_tag "bottles/terra.png", class:"image-for-phone" %>
+
+  <div>
+  <div class="grid-padding">
+    <h2>Terra d'Hom</h2>
+    <div lang="ca">
+        El nom d’aquest vi posa en relació la terra amb el viticultor. És el nostre vi de més alta gamma, sols el produïm quan el raïm és excepcional. Així aconseguim el carácter, la profunditat i la elegancia que converteixen aquest vi en el nostre orgull.
+      <ul>
+        <li>Garnatxa Negra: 30%</li>
+        <li>Merlot: 25%</li>
+        <li>Cavernet Sauvignon: 10%</li>
+        <li>Syrah: 10%</li>
+        <li>Carinyena: 5%</li>
       </ul>
     </div>
 
-    <%if (index % 2 != 0)%>
-    <%= content_tag(:div,"" ,class: "grid-image-container", style:
-    "background-image: url(#{asset_path wine[:image]}); background-size: contain;
-   "
-    ) %>
-    <%end%>
-  <%end%>
+    <div lang="es">
+      El nombre de este vino relaciona la tierra con el viticultor. Es nuestro vino de más alta gama, solo lo producimos cuando la uva es excepcional. De esta manera alcanza el carácter, la profundidad y la elegancia que lo convierten en nuestro orgullo.
+      <ul>
+      <li>Garnacha Negra: 30%</li>
+      <li>Merlot: 25%</li>
+      <li>Cabernet Sauvignon: 10%</li>
+      <li>Syrah: 10%</li>
+      <li>Cariñena: 5%</li>
+      </ul>
+    </div>
+
+    <div lang="en">
+      The name of this wine relates the land with the winemaker. It is our highest quality wine, we only produce it when the grapes are exceptional. This way, it achieves the character, depth, and elegance that make us proud
+      <ul>
+      <li>Black Grenache: 30%</li>
+      <li>Merlot: 25%</li>
+      <li>Cabernet Sauvignon: 10%</li>
+      <li>Syrah: 10%</li>
+      <li>Cariñena: 5%</li>
+      </ul>
+    </div>
+
+    <div lang="ja">
+      このワインの名前は、土地とブドウ栽培者を関係づけています。当社で最高級のワインで、ブドウが特別に優れているときにのみ生産しています。これにより、このワインの特徴、深み、エレガンスを実現し、私たちの誇りとなっています。
+      <ul>
+        <li>ガルナッチャ・ネグラ：30％</li>
+        <li>メルロー：25％</li>
+        <li>カベルネ・ソーヴィニヨン：10％</li>
+        <li>シラー：10％</li>
+        <li>カリニェナ：5％</li>
+      </ul>
+    </div>
+  </div>
 </div>
 
-<div style="margin: auto;" class="background-color">
+  <%= content_tag(:div,"" ,class: "wine-image", style: "background-image: url(#{asset_path "bottles/terra.png"});")%>
 
-<table style="width: fit-content; margin: auto; color: white">
+
+  <%= content_tag(:div,"" ,class: "wine-image", style: "background-image: url(#{asset_path "bottles/anjoli.png"});")%>
+  <%= image_tag "bottles/anjoli.png", class:"image-for-phone" %>
+
+  <div class="grid-padding">
+    <h2>Anjoli</h2>
+    <div lang="ca">
+      El nom d’Anjoli sona melòdic i agradable, tal com el caràcter del més accessible dels nostres vins. Aquest és una proposta més fàcil, fresca i alegre, sense perdre la força característica de la denominació.
+      <ul>
+      <li>Garnatxa Negra: 45%</li>
+      <li>Cavernet Sauvignon: 30%</li>
+      <li>Syrah: 20%</li>
+      <li>Merlot: 3%</li>
+      <li>Carinyena: 2%</li>
+      </ul>
+    </div>
+    <div lang="es">
+      El nombre de Anjoli suena melódico y agradable, igual que el carácter del más accesible de nuestros vinos. Esta es una propuesta más fácil, fresca y alegre, que no pierde la fuerza característica de la denominación.
+      <ul>
+      <li>Garnatxa Negra: 45%</li>
+      <li>Cavernet Sauvignon: 30%</li>
+      <li>Syrah: 20%</li>
+      <li>Merlot: 3%</li>
+      <li>Cariñena: 2%</li>
+      </ul>
+    </div>
+    <div lang="en">
+      The name Anjoli sounds melodic and pleasant, just like the character of our most accessible wine. This is an easier, fresher, and more cheerful proposal, without losing the characteristic strength of the DOQ.
+
+      <ul>
+      <li>Black Grenache: 45%</li>
+      <li>Cavernet Sauvignon: 30%</li>
+      <li>Syrah: 20%</li>
+      <li>Merlot: 3%</li>
+      <li>Cariñena: 2%</li>
+      </ul>
+    </div>
+    <div lang="ja">
+      アンジョリという名前は、私たちの最も手頃なワインの性格と同様に、旋律的で心地よい響きがあります。これは、DOQの特徴的な力強さを失うことなく、より簡単で新鮮で明るい提案です。
+
+      <ul>
+      <li>ガルナッチャ・ネグラ：45％</li>
+      <li>カベルネ・ソーヴィニョン：30％</li>
+      <li>シラー：20％</li>
+      <li>メルロー：3％</li>
+      <li>カリニェナ：2％</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+<div style="margin: auto;" class="background-color">
+</div>
+
+<table style="width: fit-content; margin: auto; color: white"  lang="ca">
   <caption>El celler en dades</caption>
     <tr>
     <td>Varietats de raim</td>
@@ -77,4 +192,100 @@
   </tr>
 </table>
 
-</div>
+<table style="width: fit-content; margin: auto; color: white"  lang="es">
+  <caption>La bodega en datos</caption>
+    <tr>
+    <td>Variedades de uva</td>
+    <td>garnacha<br> cariñena <br> syrah <br> merlot<br> cabernet sauvignon</td>
+  </tr>
+  <tr>
+    <td>Capacidad anual en litros</td>
+    <td> < 20.000</td>
+  </tr>
+  <tr>
+    <td>Producción anual en botellas</td>
+    <td> < 30.000</td>
+  </tr>
+  <tr>
+    <td>Extensión de viñedo</td>
+    <td>10ha</td>
+  </tr>
+  <tr>
+    <td>Número de barricas</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>Tipo de madera</td>
+    <td>roble francés 'allier'</td>
+  </tr>
+  <tr>
+    <td>Enología</td>
+    <td>Roser Amorós</td>
+  </tr>
+</table>
+
+<table style="width: fit-content; margin: auto; color: white" lang="en">
+  <caption>The winery in numbers</caption>
+  <tr>
+    <td>Grape varieties</td>
+    <td>Grenache<br>Carignan<br>Syrah<br>Merlot<br>Cabernet Sauvignon</td>
+  </tr>
+  <tr>
+    <td>Annual capacity in liters</td>
+    <td>&lt; 20,000</td>
+  </tr>
+  <tr>
+    <td>Annual production in bottles</td>
+    <td>&lt; 30,000</td>
+  </tr>
+  <tr>
+    <td>Vineyard area</td>
+    <td>10 ha</td>
+  </tr>
+  <tr>
+    <td>Number of barrels</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>Type of wood</td>
+    <td>French oak 'Allier'</td>
+  </tr>
+  <tr>
+    <td>Oenology</td>
+    <td>Roser Amorós</td>
+  </tr>
+</table>
+
+
+
+<table style="width: fit-content; margin: auto; color: white" lang="ja">
+  <caption>ワイナリーの数字</caption>
+  <tr>
+    <td>ブドウ品種</td>
+    <td>グルナッシュ<br>カリニャン<br>シラー<br>メルロー<br>カベルネ・ソーヴィニヨン</td>
+  </tr>
+  <tr>
+    <td>年間容量（リットル）</td>
+    <td>&lt; 20,000</td>
+  </tr>
+  <tr>
+    <td>年間生産本数</td>
+    <td>&lt; 30,000</td>
+  </tr>
+  <tr>
+    <td>葡萄畑の面積</td>
+    <td>10ヘクタール</td>
+  </tr>
+  <tr>
+    <td>樽の数</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>木材の種類</td>
+    <td>フランス産オーク（アリエ地方）</td>
+  </tr>
+  <tr>
+    <td>醸造学</td>
+    <td>Roser Amorós</td>
+  </tr>
+</table>

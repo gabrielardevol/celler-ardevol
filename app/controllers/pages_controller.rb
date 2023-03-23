@@ -2,13 +2,14 @@ class PagesController < ApplicationController
   HISTORY_CAT =
 [
   { section: "Ardèvol, Porrera, Priorat", title: "Medieu", content: "
-    La història del vi del Priorat es remunta a fa més de vuit segles, quan uns monjos provinents de la Provença francesa van assentar la Cartoixa de Scala Dei als peus del Montsant, en l’actual Escaladei. Consta que l’any 1194 s’estableixen les primeres vinyes en el sòl de llicorella, la característica pissarra prioratina. Durant aquests segles de viticultura litúrgica s'introduïren varietats de raïm com la carinyena o la garnatxa, que encara romanen en la regió avui dia. Sota el domini dels cartoixans es trobaven els nou pobles del que avui coneixem com a Priorat antic, d’entre ells Porrera.    ".html_safe , image: "history/1.jpg", href: "/history"},
+  La història del vi del Priorat es remunta a fa més de vuit segles, quan uns monjos provinents de la Provença francesa van assentar la Cartoixa de Scala Dei als peus del Montsant, en l’actual Escaladei. Consta que l’any 1194 s’estableixen les primeres vinyes en el sòl de llicorella, la característica pissarra prioratina. Durant aquests segles de viticultura litúrgica s'introduïren varietats de raïm com la carinyena o la garnatxa, que encara romanen en la regió avui dia. Sota el domini dels cartoixans es trobaven els nou pobles del que avui coneixem com a Priorat antic, d’entre ells Porrera.".html_safe ,
+  image: "history/1.jpg",
+  href: "/history"},
   { section: "Història", title: "Modernitat",
-    content: "
-    El 1836, amb la política agrícola de la desamortització de Mendizábal, es van suprimir els terrenys eclesiàstics i moltes de les vinyes cartoixanes van quedar descuidades, creixent sense manteniment ni guia. La producció entraria aquí en un declivi, rotundament agreujat a finals del XIX amb l’arribada de la coneguda plaga fil·loxera. Molts agricultors, tal com els Ardèvol, van substituir el conreu de la vinya per d’altres com l’avellana i l’ametlla. En els primers anys del segle XX la viticultura del Priorat va continuar en declivi i va ser eclipsada per altres regions vitivinícoles d'Espanya.    ".html_safe, image: "buildings/1.jpg"},
-  {section: "Història", title: "Contemporanietat", content: "
+  content: "El 1836, amb la política agrícola de la desamortització de Mendizábal, es van suprimir els terrenys eclesiàstics i moltes de les vinyes cartoixanes van quedar descuidades, creixent sense manteniment ni guia. La producció entraria aquí en un declivi, rotundament agreujat a finals del XIX amb l’arribada de la coneguda plaga fil·loxera. Molts agricultors, tal com els Ardèvol, van substituir el conreu de la vinya per d’altres com l’avellana i l’ametlla. En els primers anys del segle XX la viticultura del Priorat va continuar en declivi i va ser eclipsada per altres regions vitivinícoles d'Espanya.    ".html_safe, image: "buildings/1.jpg"},
+  { section: "Història", title: "Contemporanietat", content: "
     No és fins a les darreries del segle XX que la comarca comença a recuperar-se gràcies a l'esforç d'un grup de viticultors locals, i també a l'aparició de noves varietats de raïm. Això porta a un augment en la qualitat del vi i un major reconeixement internacionalment, en el que podríem definir com un renaixement vitivinícola de la regió. El vi Priorat passaria de la desestimada venda a granel a ser considerat un producte exclusiu i sibarita. És el 1995, en el context d’aquests primers anys de ressorgiment, que Josep Ardèvol comença amb la replantació de les antigues vinyes familiars en el terme de Porrera, poble natal on es funda el Celler Ardèvol cinc anys després. En aquest mateix any la denominació d’origen prioratina és designada com la segona denominació d’origen qualificada d’Espanya (DOQ), junt amb la Rioja, consolidant l’estatus de la regió.
-El caràcter dels vins prioratins es deu al sòl de pissarra llicorella, pobre en nutrients i en aigua, en què la vinya ha d’esforçar-se per a prosperar. El fruit resultant és petit i concentrat, dens en sucre, tanins i aroma. Això repercuteix en un vi amb molt de cos, intens i ric. Similar és la proesa de l’agricultor prioratí: el terreny és inclinat i escarpat, inaccessible a grans maquinàries, fent necessari el treball manual. Tanmateix, és per això que les produccions de la DOQ són tan limitades i exclusives, i relativament costoses.
+    El caràcter dels vins prioratins es deu al sòl de pissarra llicorella, pobre en nutrients i en aigua, en què la vinya ha d’esforçar-se per a prosperar. El fruit resultant és petit i concentrat, dens en sucre, tanins i aroma. Això repercuteix en un vi amb molt de cos, intens i ric. Similar és la proesa de l’agricultor prioratí: el terreny és inclinat i escarpat, inaccessible a grans maquinàries, fent necessari el treball manual. Tanmateix, és per això que les produccions de la DOQ són tan limitades i exclusives, i relativament costoses.
     ".html_safe, image: 'history/field.JPG'}
 ]
 
@@ -90,11 +91,10 @@ WINES_CAT =
 
 CONTACT_CAT = [
   "Celler Ardèvol i Associats, S.L.",
-	"mail: cellerardevol@yahoo.es",
-	"telf: +34 639 85 32 82",
-	"adreça: C/Barceloneta nº14, Porrera, 43739, Tarragona",
-	"enologia: Roser Amorós",
-	"vendes: Ricard Zamora, +34 620 26 75 36"
+	"cellerardevol@yahoo.es",
+	"+34 639 85 32 82",
+	"C/Barceloneta nº14, Porrera, 43739, Tarragona",
+	"Ricard Zamora: +34 620 26 75 36"
 ]
 
 @@history_cat = HISTORY_CAT
