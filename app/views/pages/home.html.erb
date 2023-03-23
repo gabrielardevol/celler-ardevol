@@ -1,42 +1,135 @@
-    <div class= "first-text padding-right padding-left"style="width: 70%; margin: auto; text-align: center;">
-    <%# <%=@about_cat[0][:content]%>
-    Hola visitant, <br>
-    aquesta pàgina està en construcció. <br>
-    Hi ha algun text que coixeja, i alguna foto millorable. <br>
-    La teva opinió serà benvinguda! <br>
-    Gabriel Ardèvol
+<%# <div class= "first-text padding-right padding-left" style="width: 70%; margin: auto; text-align: center;">
+  Hola visitant, <br>
+  aquesta pàgina està en construcció. <br>
+  Hi ha algun text que coixeja, i alguna foto millorable. <br>
+  La teva opinió serà benvinguda! <br>
+  Gabriel Ardèvol
+</div> %>
+  <div class="grid">
+    <div class= "image-container-left">
+      <img src="<%=asset_path "people/1.jpg"%>" alt="" style="width: 100%; opacity: 0.7">
+      <p style="margin: auto; position: absolute" lang="ca"> Nosaltres </p>
+      <p style="margin: auto; position: absolute" lang="es"> Nosotros </p>
+      <p style="margin: auto; position: absolute" lang="en"> About us </p>
+      <p style="margin: auto; position: absolute" lang="ja"> 私供 </p>
+
     </div>
 
+    <div class="phone-image-container" style="">
+      <img src="<%=asset_path "people/1.jpg"%>" alt="" style="width: 100%; opacity: 0.7">
+      <p style="margin: auto; color: white; position: absolute">
+        Nosaltres
+      </p>
+    </div>
 
-    <%@landing_page_cat.each_with_index do |section, index|%>
-    <div class="section-header"style=""><%=section[:section]%></div>
-    <div class="grid">
-
-
-      <%if (index % 2 == 0)%>
-      <%= content_tag(:div,"" ,class: "image-container", style:
-      "background-image: url(#{asset_path section[:image]});"
-      ) %>
-      <%end%>
-
-      <div>
-         <%= content_tag(:div,"" ,class: "small-image-container", style:
-        "background-image: url(#{asset_path section[:image]});"
-        ) %>
-
-        <div class = "grid-padding <%= (index % 2 == 0)? "padding-right" : "padding-left"%>" style= "">
-          <%# <h2> <%=section[:section]%>
-          <%# </h2> %>
-          <%= section[:content]%>
-          <a href="<%=section[:href]%>">Llegeix-ne més</a>
-        </div>
+    <div style="margin: auto; width: 80%">
+      <div class = "ellipse-text" lang="ca">
+        Som una petita empresa familiar fundada per Josep Ardèvol, viticultor i també pare. Ell va iniciar amb la replantació de la vinya familiar al 1995, quan el Priorat començava a valorar-se com a regió vinícola. Quatre anys després començava a produir el vi que ara coneixem, a partir de la fundació del celler juntament amb el seu germà Albert i la Roser Galceràn com a socis, i la Raquel en l’administració, i un poc més tard la Roser Amorós com a enòloga i el Ricard Zamora en l’apartat comercial. Gràcies a aquest projecte, el nostre pare va tenir l'oportunitat de viatjar arreu del món i conèixer a moltes persones, de les quals moltes l’acompanyarien durant tota la vida. Amb la seva peculiar manera de fer i la seva proximitat, des del petit poble de Porrera va obrir-nos una finestra al món. Actualment el Celler Ardèvol és el setè més antic del poble.
+      </div>
+      <div class = "ellipse-text" lang="es">
+        Somos una pequeña empresa familiar fundada por Josep Ardèvol, viticultor y también padre. Él inició con la replantación de la viña familiar en 1995, cuando el Priorat comenzaba a valorarse como región vinícola. Cuatro años después comenzó a producir el vino que ahora conocemos, a partir de la fundación de la bodega junto con su hermano Albert y Roser Galceràn como socios, y Raquel en la administración, y un poco más tarde Roser Amorós como enóloga y Ricard Zamora en el departamento comercial. Gracias a este proyecto, nuestro padre tuvo la oportunidad de viajar por todo el mundo y conocer a muchas personas, de las cuales muchas lo acompañarían durante toda la vida. Con su peculiar manera de hacer y su cercanía, desde el pequeño pueblo de Porrera nos abrió una ventana al mundo. Actualmente, el Celler Ardèvol es el séptimo más antiguo del pueblo.
+      </div>
+      <div class = "ellipse-text" lang="en">
+        We are a small family business founded by Josep Ardèvol, a viticulturist and also a father. He started with the replanting of the family vineyard in 1995, when Priorat began to be recognized as a wine region. Four years later, he began producing the wine that we now know, with the founding of the winery together with his brother Albert and Roser Galceràn as partners, and later Raquel in administration, Roser Amorós as the winemaker, and Ricard Zamora in the commercial department. Thanks to this project, our father has the oportunity to travel all over the world and meet many people, many of whom would accompany him throughout his life. With his unique way of doing things and his approachability, from the small town of Porrera he opened a window to the world for us. Currently, Celler Ardèvol is the seventh oldest winery in the town.
+      </div>
+      <div class = "ellipse-text" lang="ja">
+        私たちは、ワイン製造業者であり、父親でもあるビトカルチャー、ジョセップ・アルドボルによって創業された小さな家族経営の会社です。彼は1995年に家族のブドウ畑を再植したことから始め、プリオラットがワイン産地として認知され始めた頃でした。4年後、彼は兄弟のアルベルトと共同でワイナリーを設立し、ローザー・ガルセランをパートナーとして迎え、管理部門にはラクエルが、醸造家にはローザー・アモロスが、営業部門にはリカルド・サモラが加わり、今では私たちが知っているワインの生産を始めました。このプロジェクトによって、私たちの父親は世界中を旅し、多くの人々と出会い、彼の人生を通じて多くの人々に同行されました。彼のユニークなやり方とアプローチ可能性によって、ポレーラの小さな町から私たちに世界を開いてくれました。現在、セリエール・アルドボルは、町で7番目に古いワイナリーです。
       </div>
 
-      <%if (index % 2 != 0)%>
-      <%= content_tag(:div,"" ,class: "image-container", style:
-      "background-image: url(#{asset_path section[:image]});"
-      ) %>
-      <%end%>
+      <a href="/history" lang="ca" style="color: yellow">Llegeix-ne més</a>
+      <a href="/history" lang="es" style="color: yellow">Lee más</a>
+      <a href="/history" lang="en" style="color: yellow">Read more</a>
+      <a href="/history" lang="ja" style="color: yellow">もっと読む</a>
+    </div>
+
+
+
+
+   <div class="phone-image-container" style="">
+      <img src="<%=asset_path "history/field.JPG"%>" alt="" style="width: 100%; opacity: 0.7">
+      <p style="margin: auto; color: white; position: absolute" lang="ca"> Ardèvol, Porrera, Priorat </p>
+      <p style="margin: auto; color: white; position: absolute" lang="es"> Ardèvol, Porrera, Priorat </p>
+      <p style="margin: auto; color: white; position: absolute" lang="en"> Ardèvol, Porrera, Priorat </p>
+      <p style="margin: auto; color: white; position: absolute" lang="ja"> ポレラへようこそ！ </p>
 
     </div>
-  <%end%>
+
+    <div style="margin: auto; width: 80%">
+      <div class = "ellipse-text" lang="ca">
+        No és fins a les darreries del segle XX que la comarca comença a recuperar-se gràcies a l'esforç d'un grup de viticultors locals, i també a l'aparició de noves varietats de raïm. Això porta a un augment en la qualitat del vi i un major reconeixement internacionalment, en el que podríem definir com un renaixement vitivinícola de la regió. El vi Priorat passaria de la desestimada venda a granel a ser considerat un producte exclusiu i sibarita. És el 1995, en el context d’aquests primers anys de ressorgiment, que Josep Ardèvol comença amb la replantació de les antigues vinyes familiars en el terme de Porrera, poble natal on es funda el Celler Ardèvol cinc anys després. En aquest mateix any la denominació d’origen prioratina és designada com la segona denominació d’origen qualificada d’Espanya (DOQ), junt amb la Rioja, consolidant l’estatus de la regió. El caràcter dels vins prioratins es deu al sòl de pissarra llicorella, pobre en nutrients i en aigua, en què la vinya ha d’esforçar-se per a prosperar. El fruit resultant és petit i concentrat, dens en sucre, tanins i aroma. Això repercuteix en un vi amb molt de cos, intens i ric. Similar és la proesa de l’agricultor prioratí: el terreny és inclinat i escarpat, inaccessible a grans maquinàries, fent necessari el treball manual. Tanmateix, és per això que les produccions de la DOQ són tan limitades i exclusives, i relativament costoses.
+      </div>
+      <div class = "ellipse-text" lang="es">
+        No es hasta finales del siglo XX que la comarca comienza a recuperarse gracias al esfuerzo de un grupo de viticultores locales, y también a la aparición de nuevas variedades de uva. Esto lleva a un aumento en la calidad del vino y un mayor reconocimiento internacionalmente, en lo que podríamos definir como un renacimiento vitivinícola de la región. El vino Priorat pasaría de la desestimada venta a granel a ser considerado un producto exclusivo y sibarita. Es en 1995, en el contexto de estos primeros años de resurgimiento, que Josep Ardèvol comienza con la replantación de las antiguas viñas familiares en el término de Porrera, pueblo natal donde se funda el Celler Ardèvol cinco años después. En este mismo año la denominación de origen prioratina es designada como la segunda denominación de origen calificada de España (DOQ), junto con la Rioja, consolidando el estatus de la región. El carácter de los vinos prioratinos se debe al suelo de pizarra llicorella, pobre en nutrientes y en agua, en el que la vid tiene que esforzarse para prosperar. El fruto resultante es pequeño y concentrado, denso en azúcar, taninos y aroma. Esto repercute en un vino con mucho cuerpo, intenso y rico. Similar es la proeza del agricultor prioratí: el terreno es inclinado y escarpado, inaccesible a grandes maquinarias, haciendo necesario el trabajo manual. Sin embargo, es por eso que las producciones de la DOQ son tan limitadas y exclusivas, y relativamente costosas.
+      </div>
+      <div class = "ellipse-text" lang="en">
+        It is not until the end of the 20th century that the region begins to recover thanks to the efforts of a group of local winemakers, as well as the emergence of new grape varieties. This leads to an increase in the quality of wine and greater international recognition, in what could be defined as a viticultural renaissance of the region. Priorat wine went from being poorly regarded and sold in bulk to being considered an exclusive and indulgent product. In 1995, in the context of these early years of recovery, Josep Ardèvol began replanting his family's old vineyards in the town of Porrera, his birthplace where Celler Ardèvol was founded five years later. That same year, the Priorat designation of origin was designated as the second qualified designation of origin in Spain (DOQ), along with Rioja, consolidating the region's status. The character of Priorat wines is due to the slate soil, called llicorella, which is poor in nutrients and water, forcing the vine to struggle to thrive. The resulting fruit is small and concentrated, dense in sugar, tannins, and aroma. This results in a wine with a lot of body, intensity, and richness. The Priorat farmer faces a similar challenge: the terrain is steep and rugged, inaccessible to large machinery, making manual labor necessary. However, this is why DOQ productions are so limited and exclusive, and relatively expensive.
+      </div>
+      <div class = "ellipse-text" lang="ja">
+        地域の復興は、地元のワインメーカーの努力と新しいブドウ品種の登場のおかげで、20世紀末まで待たなければなりませんでした。これにより、ワインの品質が向上し、国際的な認知度も高まり、地域のワイン復興が進んだと言えます。プリオラットワインは、かつて格安でグラスで販売されていたものから、現在は高級で洗練された商品となりました。1995年には、プリオラット産地はリオハとともにスペインで2番目に認定されたDOQ（原産地呼称保証制度）に指定され、地域の地位が確立されました。プリオラットワインの特徴は、栄養素や水分が乏しい板岩の土壌、リコレーヤによるものです。そのため、ブドウは成長するために奮闘する必要があります。その結果、果実は小さく濃縮され、糖分、タンニン、香りが豊かです。そのため、プリオラットワインはボディが豊かで、強烈で豊かな味わいとなっています。プリオラットの農民は同様の課題に直面しています。傾斜がきつく、大型の機械ではアクセスできず、手作業が必要です。しかし、これがDOQの生産を限定的で高級で、相対的に高価にしています。
+      </div>
+      <a href="/history" lang="ca" style="color: yellow">Llegeix-ne més</a>
+      <a href="/history" lang="es" style="color: yellow">Lee más</a>
+      <a href="/history" lang="en" style="color: yellow">Read more</a>
+      <a href="/history" lang="ja" style="color: yellow">もっと読む</a>
+    </div>
+
+    <div class= "image-container-right">
+      <img src="<%=asset_path "history/field.JPG"%>" alt="" style="width: 100%; opacity: 0.7">
+
+      <p style="margin: auto; position: absolute" lang="ca"> Ardèvol, Porrera, Priorat </p>
+      <p style="margin: auto; position: absolute" lang="es"> Ardèvol, Porrera, Priorat </p>
+      <p style="margin: auto; position: absolute" lang="en"> Ardèvol, Porrera, Priorat </p>
+      <p style="margin: auto; position: absolute" lang="ja"> ポレラへようこそ！ </p>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+  <div style="position: relative; height: 33vw; margin: 5em 0em" class="background-color">
+
+    <div class= "image-container-left" style="display: none">
+      <img src="<%=asset_path @landing_page_cat[-1][:image]%>" alt="" style="width: 100%; opacity: 0.7">
+      <p style="margin: auto; position: absolute"><%=@landing_page_cat[-1][:section]%></p>
+    </div>
+
+    <div >
+
+      <div class="phone-image-container" style="display: none">
+        <img src="<%=asset_path @landing_page_cat[-1][:image]%>" alt="" style="width: 100%; opacity: 0.7">
+        <p style="margin: auto; position: absolute"><%=@landing_page_cat[-1][:section]%></p>
+      </div>
+
+      <div class="bottles-container-homepage" style="height: 100%; width: 103%; display: flex; flex-wrap: wrap; position: absolute; top: 0px;">
+        <%= image_tag('bottles/anjoli.png', class: 'bottle-image') %>
+        <%= image_tag('bottles/coma.png', class: 'bottle-image', style: "position: relative; z-index: 5") %>
+        <%= image_tag('bottles/terra.png', class: 'bottle-image') %>
+      </div>
+
+     <div class="bottles-container-homepage" style="display: none">
+        <%= image_tag('bottles/anjoli.png', class: 'bottle-image') %>
+        <%= image_tag('bottles/coma.png', class: 'bottle-image', style: "position: relative; z-index: 5") %>
+        <%= image_tag('bottles/terra.png', class: 'bottle-image') %>
+      </div>
+
+      <div style="position: absolute; width: 100%; margin: auto; top: -6vh">
+        <p style="margin: auto; text-align: center; position: relative; z-index: 0" class="homepage-title" lang="ca">Descobreix els nostres vins</p>
+        <p style="margin: auto; text-align: center; position: relative; z-index: 0" class="homepage-title" lang="es">Descubre nuestros vinos</p>
+        <p style="margin: auto; text-align: center; position: relative; z-index: 0" class="homepage-title" lang="en">Discover our wines</p>
+        <p style="margin: auto; text-align: center; position: relative; z-index: 0" class="homepage-title" lang="ja">私たちのワインを発見</p>
+
+        <a href="/wines" lang="ca" style="color: yellow; font-size: 200; text-align: center; width: 100%; z-index: 10; position: absolute;">Llegeix-ne més</a>
+        <a href="/wines" lang="es" style="color: yellow; font-size: 200; text-align: center; width: 100%; z-index: 10; position: absolute;">Lee más</a>
+        <a href="/wines" lang="en" style="color: yellow; font-size: 200; text-align: center; width: 100%; z-index: 10; position: absolute;">Read more</a>
+        <a href="/wines" lang="ja" style="color: yellow; font-size: 200; text-align: center; width: 100%; z-index: 10; position: absolute;">もっと読む</a>
+      </div>
+
+    </div>
+
+  </div>

@@ -1,4 +1,4 @@
-
+$wine: rgb(24, 23, 12);
 header {
   color: white;
   background-color: $wine;
@@ -23,7 +23,7 @@ header {
 }
 
 .carousel-images {
-  width: 100%; height: 100vh; background-color: black
+  width: 100%; height: 100vh;
 }
 
 .navbar {
@@ -66,5 +66,43 @@ header {
   }
   to {
     opacity: 0;
+  }
+}
+
+.black-screen {
+ height: 100vh;
+ background-color: $wine;
+}
+
+.language-icon {
+  width: 2vw;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+#logo {
+  top: 30vh;
+}
+
+.carousel-text {
+  width: 100%;
+}
+
+@media only screen and (max-width: 400px) {
+
+  .black-screen {
+    height: 75vh;
+  }
+
+  .language-icon {
+    width: 8vw;
+  }
+  #logo {
+    top: 20vh;
+  }
+  .carousel-text {
+    width: 50%;
+    text-align: center;
+    margin: auto;
   }
 }

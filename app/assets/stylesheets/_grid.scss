@@ -1,0 +1,45 @@
+
+.grid {
+  background-color: $wine;
+  color: white;
+}
+
+
+
+.ellipse-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+
+}
+
+.phone-image-container {
+  display: flex; align-items: center; justify-content: center; text-align: center;
+}
+
+.image-container-left, .image-container-right {
+  display: flex; align-items: center; justify-content: center; text-align: center;
+}
+
+.image-container-left > p , .image-container-right > p, .homepage-title, .phone-image-container > p {
+  color: white;
+  font-weight: 700;
+  font-size: clamp(40px, 3.5vw, 50px);
+}
+
+@media only screen and (min-width: 400px) {
+  .phone-image-container {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+  .image-container-left, .image-container-right {
+    display: none
+  }
+}
