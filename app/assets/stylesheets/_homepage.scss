@@ -1,0 +1,7 @@
+.bottle-image, .bottles-container-homepage {
+  height: 100%;
+  transition-duration: 0.3s;
+}
+.bottle-image:hover {
+  transform: scale(1.05);
+}
